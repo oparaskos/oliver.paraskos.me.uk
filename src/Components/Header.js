@@ -3,14 +3,18 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
 
-    if(this.props.data){
-      var name = this.props.data.name;
-      var occupation= this.props.data.occupation;
-      var description= this.props.data.description;
-      var city= this.props.data.address.city;
-      var networks= this.props.data.social.map(function(network){
-        return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
+   const networkToClass = (name) => `fa fa-${name.toLowerCase()}`
+
+    if(this.props.data && this.props.data.basics){
+      var name = this.props.data.basics.name;
+      var occupation= this.props.data.basics.label;
+      var description= this.props.data.basics.summary;
+      var city= this.props.data.basics.location.city;
+      var networks= this.props.data.basics.profiles.map(function(network){
+        return <li key={network.network}><a href={network.url}><i className={network.className || networkToClass(network.network)}></i></a></li>
       })
+    } else {
+       return <div>Something Went Wrong!</div>
     }
 
     return (
@@ -25,8 +29,8 @@ class Header extends Component {
             <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
             <li><a className="smoothscroll" href="#about">About</a></li>
 	         <li><a className="smoothscroll" href="#resume">Resume</a></li>
-            <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-            <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
+            {this.props.data.portfolio && <li><a className="smoothscroll" href="#portfolio">Works</a></li>}
+            {this.props.data.testimonials && <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>}
             <li><a className="smoothscroll" href="#contact">Contact</a></li>
          </ul>
 

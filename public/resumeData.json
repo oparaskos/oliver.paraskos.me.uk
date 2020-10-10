@@ -1,164 +1,182 @@
 {
-  "main": {
-    "name":"Tim Baker",
-    "occupation":"(Your Occupation Here)",
-    "description":"Here will be your description. Use this to describe what you do or whatever you feel best describes yourself to a potential employer",
-    "image":"profilepic.jpg",
-    "bio":"Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
-    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
-    "email": "youremailhere@gmail.com",
-    "phone": "555-555-5555",
-    "address":{
-      "street":"(Your Street)",
-      "city":"(Your City)",
-      "state":"(Your State)",
-      "zip": "(Your Zip/Postal Code)"
+    "basics": {
+        "name": "Oliver Paraskos",
+        "label": "Senior Software Engineer",
+        "picture": "",
+        "email": "oparaskos@gmail.com",
+        "phone": "(+44) 07784 196 221",
+        "website": "https://oliver.paraskos.me.uk",
+        "summary": "",
+        "location": {
+            "address": "2 Beckdale Close",
+            "postalCode": "OX26 2GT",
+            "city": "Bicester",
+            "countryCode": "GB",
+            "region": "Oxfordshire"
+        },
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "oliver-paraskos",
+                "url": "https://www.linkedin.com/in/%F0%9F%90%92-oliver-paraskos-a63620176/"
+            }
+        ]
     },
-    "website": "http://www.timbakerdev.com",
-    "resumedownload":"http://timbakerdev.com",
-    "social":[
-      {
-        "name":"facebook",
-        "url":"http://facebook.com/tim.baker.906",
-        "className":"fa fa-facebook"
-      },
-      {
-        "name":"twitter",
-        "url":"http://twitter.com",
-        "className":"fa fa-twitter"
-      },
-      {
-        "name":"google-plus",
-        "url":"http://googleplus.com/tbakerx",
-        "className":"fa fa-google-plus"
-      },
-      {
-        "name":"linkedin",
-        "url":"https://www.linkedin.com/in/tim-baker-8420009a/",
-        "className":"fa fa-linkedin"
-      },
-      {
-        "name":"instagram",
-        "url":"http://instagram.com/tbaker_x",
-        "className":"fa fa-instagram"
-      },
-      {
-        "name":"github",
-        "url":"http://github.com/tbakerx",
-        "className":"fa fa-github"
-      },
-      {
-        "name":"skype",
-        "url":"http://skype.com",
-        "className":"fa fa-skype"
-      }
-    ]
-  },
-  "resume":{
-    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
-    "education":[
-      {
-        "school":"University?",
-        "degree":"Masters in Beer tasting",
-        "graduated":"April 2007",
-        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
-      },
-      {
-        "school":"School #1 Maybe College?",
-        "degree":"What did you study 101",
-        "graduated":"March 2003",
-        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
-      }
+    "work": [
+        {
+            "company": "Flux Systems Ltd",
+            "position": "Senior Software Engineer",
+            "website": "https://tryflux.com",
+            "startDate": "2019-01-01",
+            "summary": "Low latency, high throughput transaction data matching between banks and retailers with realtime delivery of results to end-users.",
+            "highlights": [
+                "Design and Implementation of larger system features",
+                "Integration with third parties using widely varying specs and contracts",
+                "FCA, GDPR, ISO-27001, eIDAS/PSD2 Compliance",
+                "Maintenance of existing systems"
+            ]
+        },
+        {
+            "company": "Metapack",
+            "position": "Software Engineer",
+            "website": "https://metapack.com",
+            "startDate": "2018-04-01",
+            "endDate": "2019-01-01",
+            "summary": "Part of a team working on a high-performance REST-API based delivery options and shipping API which caters to several high profile and high volume retailers, across many carriers. Planning and consideration of architecture that supports zero-downtime deployments and high throughput with a fast response.",
+            "highlights": [
+                "Java/SpringBoot",
+                "AWS incl. Lambda, ECS, API GW, ALB, CloudFront, S3, Kinesis, etc.",
+                "Containerising, provisioning and deploying to ECS clusters",
+                "Migrated Ansible infrastructure to clean devops-friendly Terraform",
+                "Serverless and Asynchronous API design and architecture",
+                "Development of new features, and bugfixes in a stack composed of Groovy, Go, Java, JavaScript, and Python."
+            ]
+        },
+        {
+            "company": "Elsevier",
+            "position": "Software Engineer",
+            "website": "https://elsevier.com",
+            "startDate": "2016-03-01",
+            "endDate": "2018-04-01",
+            "summary": "In this role I developed key parts of a scalable submission and peer review platform and piecemeal replacement of WebLogic monolith.",
+            "highlights": [
+                "Java/SpringBoot microservices on AWS",
+                "Angular 1 & 2, JavaScript and TypeScript, Node.js",
+                "TDD and Training of Graduate software developers"
+            ]
+        },
+        {
+            "company": "EASA Software",
+            "position": "Software Engineer",
+            "website": "https://easasoftware.com/",
+            "startDate": "2015-05-01",
+            "endDate": "2016-03-01",
+            "summary": "As a Java developer my responsibilities included liaising and collaborating with other developers, creating software specifications, reporting progress and estimating time scales, as well as writing code and unit tests.",
+            "highlights": [
+                "Java Database Integration using Hibernate (Microsoft SQL, HSSQL, MySQL)",
+                "Rewriting and refactoring large parts of a legacy codebase",
+                "Participation in frequent software architecture/design meetings",
+                "Strong communication with QA to address key issues as they arise"
+            ]
+        },
+        {
+            "company": "NobleTech Consulting",
+            "position": "Frontend Developer",
+            "website": "https://www.facebook.com/NobleTechConsulting/",
+            "startDate": "2013-10-01",
+            "endDate": "2015-05-01",
+            "summary": "Working as a key member of a small team.",
+            "highlights": [
+                "Maintenance and upgrades to a recruitment website written in PHP, as well as the specification for its replacement.",
+                "Development of dynamic, responsive frontends to multiple applications.",
+                "Use of XPath for automated website scraping.",
+                "Database Integration with C# using Linq"
+            ]
+        }
     ],
-    "work":[
-      {
-        "company":"Awesome Design Studio",
-        "title":"Senior UX God ",
-        "years":"March 2010 - Present",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
-      },
-      {
-        "company":"Super Cool Studio",
-        "title":"Junior bug fixer",
-        "years":"March 2007 - February 2010",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
-      }
+    "skills": [
+        {
+            "name": "Agile",
+            "level": "Master",
+            "keywords": [
+                "Scrum",
+                "Kanban"
+            ]
+        },
+        {
+            "name": "Java",
+            "level": "Master",
+            "keywords": [
+                "Java",
+                "JVM",
+                "JDK",
+                "J2EE",
+                "JRE",
+                "Spring",
+                "Dropwizard"
+            ]
+        },
+        {
+            "name": "Kotlin",
+            "level": "Master",
+            "keywords": [
+                "ktor"
+            ]
+        },
+        {
+            "name": "AWS",
+            "level": "Master",
+            "keywords": [
+                "DynamoDB",
+                "S3",
+                "SES",
+                "IAM",
+                "Route53",
+                "EC2",
+                "Lambda",
+                "ELB",
+                "ALB",
+                "Cloudfront",
+                "SQS",
+                "SNS"
+            ]
+        },
+        {
+            "name": "NoSQL Document Databases",
+            "level": "Master",
+            "keywords": [
+                "DynamoDB",
+                "MongoDB"
+            ]
+        },
+        {
+            "name": "Web Development",
+            "level": "Master",
+            "keywords": [
+                "HTML5",
+                "CSS",
+                "Javascript",
+                "ECMAScript",
+                "TypeScript"
+            ]
+        },
+        {
+            "name": "Node.js",
+            "level": "Master"
+        },
+        {
+            "name": "Python",
+            "level": "Good"
+        },
+        {
+            "name": "C#",
+            "level": "Good"
+        }
     ],
-    "skills":[
-      {
-        "name":"Git",
-        "level":"60%"
-      },
-      {
-        "name":"Illustrator",
-        "level":"55%"
-      },
-      {
-        "name":"ReactJs",
-        "level":"50%"
-      },
-      {
-        "name":"CSS",
-        "level":"90%"
-      },
-      {
-        "name":"HTML5",
-        "level":"80%"
-      },
-      {
-        "name":"VueJs",
-        "level":"50%"
-      },
-      {
-        "name":"MongoDB",
-        "level":"80%"
-      }
+    "languages": [
+        {
+            "language": "English",
+            "fluency": "Native speaker"
+        }
     ]
-  },
-  "portfolio":{
-    "projects": [
-      {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"canadian-wanderlust.jpg",
-        "url":"https://www.canadianwanderlust.com"
-      },
-      {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
-        "image":"fury-fighting-gear.jpg",
-        "url":"http://www.timbakerdev.com"
-      },
-      {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"original-thai-food.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
-      },
-      {
-        "title":"Resume Website",
-        "category":"A React based resume website template",
-        "image":"resume-website.jpg",
-        "url":"http://www.timbakerdev.com"
-      },
-      {
-        "title":"Smirkspace",
-        "category":"(MVP Only) A React and Meteor based chat University project.",
-        "image":"smirkspace.jpg",
-        "url":"http://www.smirkspace.com"
-      }
-    ]
-  },
-  "testimonials":{
-    "testimonials":[
-      {
-        "text":"Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
-        "user":"Kareem Abdul Jabbar"
-      },
-      {
-        "text":"That Tim Baker must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
-        "user":"Steve Wozniak... impersonator"
-      }
-    ]
-  }
 }

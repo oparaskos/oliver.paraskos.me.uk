@@ -280,6 +280,11 @@ ul#nav li.current a { color: #F06000; }
    font: 15px/24px 'opensans-regular', sans-serif;
    margin-top: 6px;
 }
+#resume .highlights {
+   list-style: disc;
+   padding-left: 2rem;
+   font-size: 90%;
+}
 
 /*----------------------------------------------*/
 /*	Skill Bars
@@ -295,7 +300,7 @@ ul#nav li.current a { color: #F06000; }
   	margin-top: 36px;
    list-style: none;
 }
-.bars li {
+.bars li.bar {
    position: relative;
   	margin-bottom: 60px;
   	background: #ccc;
@@ -308,8 +313,13 @@ ul#nav li.current a { color: #F06000; }
 	text-transform: uppercase;
    letter-spacing: 2px;
 	font-weight: normal;
+}
+.bars li.bar em {
    position: relative;
 	top: -36px;
+}
+.bars li.simple em {
+   display: block;
 }
 .bar-expand {
    position: absolute;
