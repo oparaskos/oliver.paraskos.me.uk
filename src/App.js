@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
-import $ from 'jquery';
 import './App.css';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
@@ -9,6 +8,7 @@ import Resume from './Components/Resume';
 import Contact from './Components/Contact';
 import Testimonials from './Components/Testimonials';
 import Portfolio from './Components/Portfolio';
+import { Helmet } from 'react-helmet';
 
 class App extends Component {
 
@@ -19,24 +19,19 @@ class App extends Component {
       resume: {}
     };
 
-    ReactGA.initialize('UA-110570651-1');
+    ReactGA.initialize('UA-180790252-1');
     ReactGA.pageview(window.location.pathname);
-
   }
 
   getResume(){
-    $.ajax({
-      url:'/resume.json',
-      dataType:'json',
-      cache: false,
-      success: function(data){
-        this.setState({resume: data});
-      }.bind(this),
-      error: function(xhr, status, err){
+    const self = this;
+    return fetch('/resume.json')
+      .then(response => response.json())
+      .then(data => self.setState({resume: data}))
+      .catch((err) => {
         console.log(err);
         alert(err);
-      }
-    });
+      });
   }
 
   componentDidMount(){
@@ -46,6 +41,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+          {this.state.resume.basics && <Helmet>
+            <title>{this.state.resume.basics.fullName || this.state.resume.basics.name}</title>
+            <meta property="og:title" content={this.state.resume.basics.fullName || this.state.resume.basics.name} />
+            <meta property="og:description" content={`I'm ${this.state.resume.basics.name}. I'm a ${this.state.resume.basics.location.city} based ${this.state.resume.basics.label}, ${this.state.resume.basics.summary}.`} />
+          </Helmet>
+        }
         <Header data={this.state.resume}/>
         <About data={this.state.resume.basics}/>
         <Resume data={this.state.resume}/>

@@ -1,6 +1,10 @@
-import { isNumeric } from 'jquery';
+
 import React, { Component } from 'react';
 import Work from './Work';
+
+function isNumeric(str) {
+  return RegExp('^[\\d\\.]+$').test(str);
+}
 
 class Resume extends Component {
   render() {

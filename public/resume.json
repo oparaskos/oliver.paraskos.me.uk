@@ -1,12 +1,13 @@
 {
     "basics": {
         "name": "Oliver Paraskos",
+        "fullName": "Oliver Zeno Paraskos",
         "label": "Senior Software Engineer",
         "picture": "",
         "email": "oparaskos@gmail.com",
         "phone": "(+44) 07784 196 221",
         "website": "https://oliver.paraskos.me.uk",
-        "summary": "",
+        "summary": "Working at Flux",
         "location": {
             "address": "",
             "postalCode": "",
@@ -24,6 +25,12 @@
                 "network": "Keybase",
                 "username": "oparaskos",
                 "url": "https://keybase.io/oparaskos"
+            },
+            {
+                "network": "Sketchfab",
+                "className": "cube",
+                "username": "oparaskos",
+                "url": "https://sketchfab.com/oparaskos"
             }
         ]
     },
@@ -63,7 +70,7 @@
             "website": "https://elsevier.com",
             "startDate": "2016-03-01",
             "endDate": "2018-04-01",
-            "summary": "In this role I developed key parts of a scalable submission and peer review platform and piecemeal replacement of WebLogic monolith.",
+            "summary": "Develop critical parts of a scalable submission and peer review platform and piecemeal replacement of WebLogic monolith.",
             "highlights": [
                 "Java/SpringBoot microservices on AWS",
                 "Angular 1 & 2, JavaScript and TypeScript, Node.js",
@@ -76,7 +83,7 @@
             "website": "https://easasoftware.com/",
             "startDate": "2015-05-01",
             "endDate": "2016-03-01",
-            "summary": "As a Java developer my responsibilities included liaising and collaborating with other developers, creating software specifications, reporting progress and estimating time scales, as well as writing code and unit tests.",
+            "summary": "Liaising and collaborating with other developers, creating software specifications, reporting progress and estimating time scales, in addition to code and unit tests.",
             "highlights": [
                 "Java Database Integration using Hibernate (Microsoft SQL, HSSQL, MySQL)",
                 "Rewriting and refactoring large parts of a legacy codebase",
@@ -90,7 +97,7 @@
             "website": "https://www.facebook.com/NobleTechConsulting/",
             "startDate": "2013-10-01",
             "endDate": "2015-05-01",
-            "summary": "Working as a key member of a small team.",
+            "summary": "Development of a new interactive knowledge-base, maintenance and end-of life for an industry-focused careers portal",
             "highlights": [
                 "Maintenance and upgrades to a recruitment website written in PHP, as well as the specification for its replacement.",
                 "Development of dynamic, responsive frontends to multiple applications.",

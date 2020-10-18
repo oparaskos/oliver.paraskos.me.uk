@@ -10,7 +10,7 @@ class About extends Component {
          var name = this.props.data.name;
          var profilepic = this.props.data.image;
          var bio = this.props.data.bio || this.props.data.summary;
-         var download = "www.google.com";//this.props.data.download;
+         var download = this.props.data.download;
       }
 
       return (
