@@ -608,17 +608,12 @@ ul#nav li.current a { color: #F06000; }
    letter-spacing: 3px;
    color: #fff;
 }
-#call-to-action h1 span { display: none; }
-#call-to-action .header-col h1:before {
-   font-family: 'FontAwesome';
-   content: "\f0ac";
-	padding-right: 10px;
-	font-size: 72px;
-   line-height: 72px;
-   text-align: left;
-   float: left;
-   color: #fff;
+
+#call-to-action h1 svg { 
+   width: 72px;
+   height: 72px;
 }
+
 #call-to-action .action {
    margin-top: 12px;
 }
@@ -675,18 +670,12 @@ call-to-action .button {
    letter-spacing: 3px;
    color: #fff;
 }
-#testimonials h1 span { display: none; }
-#testimonials .header-col { padding-top: 9px; }
-#testimonials .header-col h1:before {
-   font-family: 'FontAwesome';
-   content: "\f10d";
-	padding-right: 10px;
-	font-size: 72px;
-   line-height: 72px;
-   text-align: left;
-   float: left;
-   color: #fff;
+#testimonials h1 svg { 
+   width: 72px;
+   height: 72px;
 }
+
+#testimonials .header-col { padding-top: 9px; }
 
 /*	Blockquotes */
 #testimonials blockquote {
