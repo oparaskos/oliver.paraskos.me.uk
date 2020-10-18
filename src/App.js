@@ -16,7 +16,7 @@ class App extends Component {
     super(props);
     this.state = {
       foo: 'bar',
-      resumeData: {}
+      resume: {}
     };
 
     ReactGA.initialize('UA-110570651-1');
@@ -24,13 +24,13 @@ class App extends Component {
 
   }
 
-  getResumeData(){
+  getResume(){
     $.ajax({
-      url:'/resumeData.json',
+      url:'/resume.json',
       dataType:'json',
       cache: false,
       success: function(data){
-        this.setState({resumeData: data});
+        this.setState({resume: data});
       }.bind(this),
       error: function(xhr, status, err){
         console.log(err);
@@ -40,19 +40,19 @@ class App extends Component {
   }
 
   componentDidMount(){
-    this.getResumeData();
+    this.getResume();
   }
 
   render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeData}/>
-        <About data={this.state.resumeData.basics}/>
-        <Resume data={this.state.resumeData}/>
-        {this.state.resumeData.portfolio && <Portfolio data={this.state.resumeData.portfolio}/>}
-        {this.state.resumeData.testimonials && <Testimonials data={this.state.resumeData.testimonials}/>}
-        <Contact data={this.state.resumeData.basics}/>
-        <Footer data={this.state.resumeData.basics}/>
+        <Header data={this.state.resume}/>
+        <About data={this.state.resume.basics}/>
+        <Resume data={this.state.resume}/>
+        {this.state.resume.portfolio && <Portfolio data={this.state.resume.portfolio}/>}
+        {this.state.resume.testimonials && <Testimonials data={this.state.resume.testimonials}/>}
+        <Contact data={this.state.resume.basics}/>
+        <Footer data={this.state.resume.basics}/>
       </div>
     );
   }

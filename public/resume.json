@@ -8,8 +8,8 @@
         "website": "https://oliver.paraskos.me.uk",
         "summary": "",
         "location": {
-            "address": "2 Beckdale Close",
-            "postalCode": "OX26 2GT",
+            "address": "",
+            "postalCode": "",
             "city": "Bicester",
             "countryCode": "GB",
             "region": "Oxfordshire"
@@ -19,6 +19,11 @@
                 "network": "LinkedIn",
                 "username": "oliver-paraskos",
                 "url": "https://www.linkedin.com/in/%F0%9F%90%92-oliver-paraskos-a63620176/"
+            },
+            {
+                "network": "Keybase",
+                "username": "oparaskos",
+                "url": "https://keybase.io/oparaskos"
             }
         ]
     },

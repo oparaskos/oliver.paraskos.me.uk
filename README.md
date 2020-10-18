@@ -18,7 +18,7 @@ Once you have a React app up and running by following the steps in the above lin
 ### 4. Replace images and fonts
 Next, you will want to replace the images, and fonts if you like, with your own. All you have to do is replace the images at public/images/header-background.jpg, public/images/testimonials-bg.jpg and public/favicon.ico with your own. <em>YOU MUST KEEP THE SAME NAMES ON THE IMAGES.</em>  
 ### 5. Fill in your personal info
-To populate the website with all of your own data, open the public/resumeData.json file and simply replace the data in there with your own. Images for the porfolio section are to be put in the public/images/portfolio folder.
+To populate the website with all of your own data, open the public/resume.json file and simply replace the data in there with your own. Images for the porfolio section are to be put in the public/images/portfolio folder.
 ### 6. Make any styling changes you would like
 Of course, all of the code is there and nothing is hidden from you so if you would like to make any other styling changes, feel free!
 ### 7. Enjoy your new Resume Website
