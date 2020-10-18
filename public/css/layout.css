@@ -821,16 +821,10 @@ call-to-action .button {
    color: #EBEEEE;
    margin-bottom: 6px;
 }
-#contact h1 span { display: none; }
-#contact h1:before {
-   font-family: 'FontAwesome';
-   content: "\f0e0";
-	padding-right: 10px;
-	font-size: 72px;
-   line-height: 72px;
-   text-align: left;
-   float: left;
-   color: #ebeeee;
+
+#contact h1 svg {
+   width: 72px;
+   height: 72px;
 }
 
 #contact h4 {

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ContactDetails from './ContactDetails';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 class Contact extends Component {
    render() {
@@ -13,7 +15,7 @@ class Contact extends Component {
       return <section id="contact">
          <div className="row section-head">
             <div className="two columns header-col">
-               <h1><span>Get In Touch.</span></h1>
+               <h1><FontAwesomeIcon icon={faEnvelope}/></h1>
             </div>
 
             <div className="ten columns">
@@ -57,7 +59,7 @@ class Contact extends Component {
 
                <div id="message-warning"> Error boy</div>
                <div id="message-success">
-                  <i className="fa fa-check"></i>Your message was sent, thank you!<br />
+                  <FontAwesomeIcon icon={faCheck}/> Your message was sent, thank you!<br />
                </div>
             </div>
 

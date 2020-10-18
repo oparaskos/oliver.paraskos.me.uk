@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 class ContactDetails extends Component {
     render() {
@@ -25,9 +27,9 @@ class ContactDetails extends Component {
                     {(zip && <span>, {zip}</span>)}
                 </address>
                 <br />
-                <a href={`tel:${phone}`}>{phone}</a>
+                <a href={`tel:${phone}`}><FontAwesomeIcon icon={faPhone} /> {phone}</a>
                 <br />
-                <a href={`mailto:${email}`}>{email}</a>
+                <a href={`mailto:${email}`}><FontAwesomeIcon icon={faEnvelope} /> {email}</a>
             </aside>
         </div>
     }

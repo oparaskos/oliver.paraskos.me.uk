@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 class Portfolio extends Component {
   render() {
@@ -16,7 +18,7 @@ class Portfolio extends Component {
                      <p>{projects.category}</p>
                   </div>
                 </div>
-              <div className="link-icon"><i className="fa fa-link"></i></div>
+              <div className="link-icon"><FontAwesomeIcon icon={faLink} /></div>
             </a>
           </div>
         </div>
