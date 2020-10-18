@@ -2,7 +2,7 @@
   "name": "personalportfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "http://oliver.paraskos.me.uk",
+  "homepage": "http://oliver.paraskos.me.uk",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
@@ -13,11 +13,12 @@
     "react-dom": "^16.14.0",
     "react-ga": "^2.3.5",
     "react-helmet": "^6.1.0",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "react-scroll": "^1.8.1"
   },
   "scripts": {
-    "start": "react-scripts start  --env-file=.env",
-    "build": "react-scripts build  --env-file=production.env",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
