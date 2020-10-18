@@ -15,16 +15,20 @@ class ContactDetails extends Component {
 
         return <div className="columns contact-details">
             <h2>Contact Details</h2>
-            <p className="address">
+            <aside className="address">
                 <span>{name}</span><br />
-                <address>{street}<br />
-                    {city} {state}, {zip}
+                <address>
+                    {street}
+                    {street && (city || state || zip) && <br />}
+                    {city}
+                    {(state && <span>, {state}</span>)}
+                    {(zip && <span>, {zip}</span>)}
                 </address>
                 <br />
                 <a href={`tel:${phone}`}>{phone}</a>
                 <br />
                 <a href={`mailto:${email}`}>{email}</a>
-            </p>
+            </aside>
         </div>
     }
 }

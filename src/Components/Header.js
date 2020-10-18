@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
+import Socials from './Socials';
 
 class Header extends Component {
   render() {
 
-   const networkToClass = (name) => `fa fa-${name.toLowerCase()}`
-
-    if(this.props.data && this.props.data.basics){
+   if (this.props.data && this.props.data.basics){
       var name = this.props.data.basics.name;
       var occupation= this.props.data.basics.label;
       var description= this.props.data.basics.summary;
       var city= this.props.data.basics.location.city;
-      var networks= this.props.data.basics.profiles.map(function(network){
-        return <li key={network.network}><a href={network.url}><i className={network.className || networkToClass(network.network)}></i></a></li>
-      })
-    } else {
-       return <div>Something Went Wrong!</div>
-    }
+      var profiles = this.props.data.basics.profiles;
+   } else {
+      return <div>Something Went Wrong!</div>
+   }
 
     return (
       <header id="home">
@@ -42,7 +39,7 @@ class Header extends Component {
             <h3>I'm a {city} based <span>{occupation}</span>. {description}.</h3>
             <hr />
             <ul className="social">
-               {networks}
+               <Socials profiles={profiles} />
             </ul>
          </div>
       </div>
