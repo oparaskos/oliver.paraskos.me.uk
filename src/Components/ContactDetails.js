@@ -27,9 +27,9 @@ class ContactDetails extends Component {
                     {(zip && <span>, {zip}</span>)}
                 </address>
                 <br />
-                <a href={`tel:${phone}`}><FontAwesomeIcon icon={faPhone} /> {phone}</a>
+                <a itemProp="telephone" href={`tel:${phone}`}><FontAwesomeIcon icon={faPhone} /> {phone}</a>
                 <br />
-                <a href={`mailto:${email}`}><FontAwesomeIcon icon={faEnvelope} /> {email}</a>
+                <a itemProp="email" href={`mailto:${email}`}><FontAwesomeIcon icon={faEnvelope} /> {email}</a>
             </aside>
         </div>
     }

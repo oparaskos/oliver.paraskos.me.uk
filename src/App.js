@@ -40,7 +40,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" itemScope itemProp="Person" itemType="https://schema.org/Person">
           {this.state.resume.basics && <Helmet>
             <title>{this.state.resume.basics.fullName || this.state.resume.basics.name}</title>
             <meta property="og:title" content={this.state.resume.basics.fullName || this.state.resume.basics.name} />

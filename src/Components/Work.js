@@ -9,7 +9,7 @@ const Work = ({ jobs }) => (
         <div className="nine columns main-col">
             {jobs.map((work) => 
                 <div key={work.company}>
-                    <h3><a href={work.website}>{work.company}</a></h3>
+                    <h3><a rel="noreferrer noopener" href={work.website} itemProp="alumniOf">{work.company}</a></h3>
 
                     <p className="info">{work.position}<span>&bull;</span> <em className="date">{work.startDate}–{work.endDate || "Present"}</em></p>
 

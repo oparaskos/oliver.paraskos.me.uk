@@ -9,7 +9,7 @@ library.add(fab, fas)
 const Socials = ({profiles}) => 
   (profiles.map((network) =>
     <li key={network.network}>
-      <a href={network.url} title={network.network}>
+      <a rel="noreferrer noopener" href={network.url} title={network.network} itemProp="sameAs">
         <FontAwesomeIcon icon={network.className || (network.network &&  ['fab', network.network.toLowerCase()] )} />
       </a>
     </li>)

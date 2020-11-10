@@ -7,7 +7,7 @@
         "email": "oparaskos@gmail.com",
         "phone": "(+44) 07784 196 221",
         "website": "https://oliver.paraskos.me.uk",
-        "summary": "Working at Flux",
+        "summary": "",
         "location": {
             "address": "",
             "postalCode": "",
@@ -16,6 +16,11 @@
             "region": "Oxfordshire"
         },
         "profiles": [
+            {
+                "network": "GitHub",
+                "username": "oparaskos",
+                "url": "https://github.com/oparaskos"
+            },
             {
                 "network": "LinkedIn",
                 "username": "oliver-paraskos",

@@ -5,9 +5,17 @@ class Header extends Component {
   render() {
 
    if (this.props.data && this.props.data.basics){
+      var currentEmployer = <span>
+         {this.props.data.work
+            .filter((it) => !it.endDate)
+            .map((work) => <a key={work.company} href={work.website} itemProp="affiliation" rel="noreferrer noopener">
+                  {work.company.split(/\s+/).join("\u00A0")}
+               </a>
+            )}
+      </span>
       var name = this.props.data.basics.name;
       var occupation= this.props.data.basics.label;
-      var description= this.props.data.basics.summary;
+      var description= this.props.data.basics.summary || <span>Currently working at {currentEmployer}</span>;
       var city= this.props.data.basics.location.city;
       var profiles = this.props.data.basics.profiles;
    } else {
@@ -35,8 +43,8 @@ class Header extends Component {
 
       <div className="row banner">
          <div className="banner-text">
-            <h1 className="responsive-headline">I'm {name}.</h1>
-            <h3>I'm a {city} based <span>{occupation}</span> {description}.</h3>
+            <h1 className="responsive-headline">I'm <span itemProp="name">{name}</span>.</h1>
+            <h3>I'm a <span itemProp="homeLocation">{city}</span> based <span itemProp="jobTitle">{occupation}</span>. {description}.</h3>
             <hr />
             <ul className="social">
                <Socials profiles={profiles} />
