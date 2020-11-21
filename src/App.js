@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import ReactGA from 'react-ga';
-import './App.css';
+import React, { useEffect, useState } from 'react';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import About from './Components/About';
@@ -10,53 +8,41 @@ import Testimonials from './Components/Testimonials';
 import Portfolio from './Components/Portfolio';
 import { Helmet } from 'react-helmet';
 
-class App extends Component {
 
-  constructor(props){
-    super(props);
-    this.state = {
-      foo: 'bar',
-      resume: {}
-    };
+function App() {
 
-    ReactGA.initialize('UA-180790252-1');
-    ReactGA.pageview(window.location.pathname);
-  }
+  const [resume, setResume] = useState();
 
-  getResume(){
-    const self = this;
+  useEffect(() => {
     return fetch('/resume.json')
       .then(response => response.json())
-      .then(data => self.setState({resume: data}))
+      .then(data => setResume(data))
       .catch((err) => {
         console.log(err);
         alert(err);
       });
-  }
+  }, [setResume]);
 
-  componentDidMount(){
-    this.getResume();
-  }
+  if (!resume) return <></>;
 
-  render() {
-    return (
-      <div className="App" itemScope itemProp="Person" itemType="https://schema.org/Person">
-          {this.state.resume.basics && <Helmet>
-            <title>{this.state.resume.basics.fullName || this.state.resume.basics.name}</title>
-            <meta property="og:title" content={this.state.resume.basics.fullName || this.state.resume.basics.name} />
-            <meta property="og:description" content={`I'm ${this.state.resume.basics.name}. I'm a ${this.state.resume.basics.location.city} based ${this.state.resume.basics.label}, ${this.state.resume.basics.summary}.`} />
-          </Helmet>
-        }
-        <Header data={this.state.resume}/>
-        <About data={this.state.resume.basics}/>
-        <Resume data={this.state.resume}/>
-        {this.state.resume.portfolio && <Portfolio data={this.state.resume.portfolio}/>}
-        {this.state.resume.testimonials && <Testimonials data={this.state.resume.testimonials}/>}
-        <Contact data={this.state.resume.basics}/>
-        <Footer data={this.state.resume} />
-      </div>
-    );
-  }
+  return (
+    <div className="App" itemScope itemProp="Person" itemType="https://schema.org/Person">
+      {resume.basics && <Helmet>
+        <title>{resume.basics.fullName || resume.basics.name}</title>
+        <meta property="og:title" content={resume.basics.fullName || resume.basics.name} />
+        <meta property="og:description" content={`I'm ${resume.basics.name}. I'm a ${resume.basics.location.city} based ${resume.basics.label}, ${resume.basics.summary}.`} />
+        <meta name="description" content={`I'm ${resume.basics.name}. I'm a ${resume.basics.location.city} based ${resume.basics.label}, ${resume.basics.summary}.`} />
+      </Helmet>
+      }
+      <Header data={resume} />
+      <About data={resume.basics} />
+      <Resume data={resume} />
+      {resume.portfolio && <Portfolio data={resume.portfolio} />}
+      {resume.testimonials && <Testimonials data={resume.testimonials} />}
+      <Contact data={resume.basics} />
+      <Footer data={resume} />
+    </div>
+  );
 }
 
 export default App;

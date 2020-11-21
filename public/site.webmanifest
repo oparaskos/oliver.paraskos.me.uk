@@ -11,10 +11,16 @@
             "src": "/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
+        },
+        {
+            "src": "/maskable.png",
+            "sizes": "225x225",
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ],
     "theme_color": "#acdfa1",
     "background_color": "#acdfa1",
-    "start_url": "http://oliver.paraskos.me.uk",
+    "start_url": "/",
     "display": "standalone"
 }

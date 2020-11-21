@@ -1,6 +1,6 @@
 {
-  "name": "personalportfolio",
-  "version": "0.1.0",
+  "name": "oliver-paraskos-me-uk",
+  "version": "0.2.0",
   "private": true,
   "homepage": "https://oliver.paraskos.me.uk",
   "dependencies": {
@@ -8,18 +8,40 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
-    "jquery": "^3.2.1",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.2.2",
+    "date-fns": "^2.16.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-ga": "^2.3.5",
     "react-helmet": "^6.1.0",
-    "react-scripts": "1.0.17",
-    "react-scroll": "^1.8.1"
+    "react-scripts": "4.0.0",
+    "react-scroll": "^1.8.1",
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -22,7 +22,9 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
-body { background: #0f0f0f; }
+body {
+   background: #0f0f0f;
+}
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -65,23 +67,23 @@ header .banner-text h1 {
    margin: 0 auto 18px auto;
    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 }
-header .banner-text h3 {
-   font: 18px/1.9em 'librebaskerville-regular', serif;
+header .banner-text h2 {
+   font: 2.4rem 'librebaskerville-regular', serif;
    color: #DDE3DC;
    margin: 0 auto;
    width: 70%;
    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
 }
-header .banner-text h3 span {
+header .banner-text h2 span {
    color: #ffffffff;
 }
 
-header .banner-text h3 a {
+header .banner-text h2 a {
    color: #d9edffff;
    position: relative;
 }
 
-header .banner-text h3 a:hover {
+header .banner-text h2 a:hover {
    text-decoration: underline;
    color: #11ABB0ff; 
    transition: all 1s;
@@ -249,9 +251,9 @@ ul#nav li.current a { color: #F06000; }
    color: #fff;
    margin-bottom: 12px;
 }
-#about p {
+#about .address {
    line-height: 30px;
-   color: #7A7A7A;
+   color: #acacac;
 }
 #about .profile-pic {
    position: relative;
@@ -288,6 +290,7 @@ ul#nav li.current a { color: #F06000; }
    padding-top: 90px;
    padding-bottom: 72px;
    overflow: hidden;
+   color: #0D0D0D;
 }
 
 #resume a, #resume a:visited  { color: #11ABB0; }
@@ -314,19 +317,20 @@ ul#nav li.current a { color: #F06000; }
    padding-bottom: 24px;
    border-bottom: 1px solid #E8E8E8;
 }
+
+#resume .work h3 a, #resume .work h3 a:visited {
+   color: #096751;
+}
+
 #resume .info {
    font: 16px/24px 'librebaskerville-italic', serif;
-   color: #6E7881;
+   color: #313941;
    margin-bottom: 18px;
    margin-top: 9px;
 }
 #resume .info span {
    margin-right: 5px;
    margin-left: 5px;
-}
-#resume .date {
-   font: 15px/24px 'opensans-regular', sans-serif;
-   margin-top: 6px;
 }
 #resume .highlights {
    list-style: disc;
@@ -844,24 +848,29 @@ call-to-action .button {
    background: #191919;
    padding-top: 96px;
    padding-bottom: 102px;
-   color: #636363;
+   color: #979797;
 }
 #contact .section-head { margin-bottom: 42px; }
 
 #contact a, #contact a:visited  { color: #11ABB0; }
 #contact a:hover, #contact a:focus { color: #fff; }
 
-#contact h1 {
-   font: 18px/24px 'opensans-bold', sans-serif;
+#contact h1, #contact h2, #contact h3, #contact h4, #contact h5, #contact h6 {
+   font-family: 'opensans-bold', sans-serif;
    text-transform: uppercase;
    letter-spacing: 3px;
    color: #EBEEEE;
    margin-bottom: 6px;
+   white-space: nowrap;
+}
+
+#contact h1 {
+   font-size: 4rem;
 }
 
 #contact h1 svg {
-   width: 72px;
-   height: 72px;
+   width: 4rem;
+   height: 4rem;
 }
 
 #contact h4 {
@@ -874,79 +883,6 @@ call-to-action .button {
    padding-right: 3%;
 }
 #contact .header-col { padding-top: 6px; }
-
-
-/* contact form */
-#contact form { margin-bottom: 30px; }
-#contact label {
-   font: 15px/24px 'opensans-bold', sans-serif;
-   margin: 12px 0;
-   color: #EBEEEE;
-	display: inline-block;
-	float: left;
-   width: 26%;
-}
-#contact input,
-#contact textarea,
-#contact select {
-   padding: 18px 20px;
-	color: #eee;
-	background: #373233;
-	margin-bottom: 42px;
-	border: 0;
-	outline: none;
-   font-size: 15px;
-   line-height: 24px;
-   width: 65%;
-}
-#contact input:focus,
-#contact textarea:focus,
-#contact select:focus {
-	color: #fff;
-	background-color: #11ABB0;
-}
-#contact button.submit {
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	color:#fff;
-   background: #0D0D0D;
-	border: none;
-   cursor: pointer;
-   height: auto;
-   display: inline-block;
-	border-radius: 3px;
-   margin-left: 26%;
-}
-#contact button.submit:hover {
-	color: #0D0D0D;
-	background: #fff;
-}
-#contact span.required {
-	color: #11ABB0;
-	font-size: 13px;
-}
-#message-warning, #message-success {
-   display: none;
-	background: #0F0F0F;
-	padding: 24px 24px;
-	margin-bottom: 36px;
-   width: 65%;
-   margin-left: 26%;
-}
-#message-warning { color: #D72828; }
-#message-success { color: #11ABB0; }
-
-#message-warning i,
-#message-success i {
-   margin-right: 10px;
-}
-#image-loader {
-   display: none;
-   position: relative;
-   left: 18px;
-   top: 17px;
-}
-
 
 /* Twitter Feed */
 #twitter {
@@ -974,13 +910,13 @@ call-to-action .button {
 footer {
    padding-top: 48px;
    margin-bottom: 48px;
-   color: #303030;
+   color: #979797;
    font-size: 14px;
    text-align: center;
    position: relative;
 }
 
-footer a, footer a:visited { color: #525252; }
+footer a, footer a:visited { color: #11ABB0ff; }
 footer a:hover, footer a:focus { color: #fff; }
 
 /* copyright */

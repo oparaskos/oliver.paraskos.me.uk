@@ -15,11 +15,6 @@
     <meta name="msapplication-TileColor" content="#559647">
     <meta name="theme-color" content="#acdfa1">
 
-    <link rel="stylesheet" href="%PUBLIC_URL%/css/default.css">
-    <link rel="stylesheet" href="%PUBLIC_URL%/css/layout.css">
-    <link rel="stylesheet" href="%PUBLIC_URL%/css/media-queries.css">
-    <link rel="stylesheet" href="%PUBLIC_URL%/css/magnific-popup.css">
-
     <meta property="og:image:height" content="520">
     <meta property="og:image:width" content="993">
     <meta property="og:title" content="%REACT_APP_DEFAULT_TITLE%">
@@ -29,17 +24,43 @@
 
     <meta name="robots" content="index, follow">
     
-    <meta property="description" content="%REACT_APP_DEFAULT_DESCRIPTION%">
+    <meta name="description" content="%REACT_APP_DEFAULT_DESCRIPTION%">
     <title>%REACT_APP_DEFAULT_TITLE%</title>
   </head>
 
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
+  <body style="margin:0;padding:0">
     <div id="root">
-      <h1>%REACT_APP_DEFAULT_TITLE%</h1>
-      <p>%REACT_APP_DEFAULT_DESCRIPTION%</p>
+      <header>
+        <div className="row">
+           <div className="three columns">
+              <img className="profile-pic" style="width: 100%; height: 100vh;margin:0;padding:0" src="%PUBLIC_URL%/images/header-background.jpg" />
+           </div>
+           <div className="nine columns main-col">
+              <div>
+                <h2>%REACT_APP_DEFAULT_TITLE%</h2>
+                <p>%REACT_APP_DEFAULT_DESCRIPTION%</p>
+                <noscript>
+                  You need to enable JavaScript to run this app.
+                </noscript>
+              </div>
+           </div>
+        </div>
+     </header>
     </div>
+
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/default.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/layout.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/media-queries.css">
+
+    <link rel="preload" as="style" href="%PUBLIC_URL%/css/fonts.css">
+    
+    <link rel="preload" as="font" href="%PUBLIC_URL%/css/fonts/opensans/OpenSans-Regular-webfont.woff" type="font/woff" crossorigin="anonymous"/>
+    <link rel="preload" as="font" href="%PUBLIC_URL%/css/fonts/opensans/OpenSans-Italic-webfont.woff" type="font/woff" crossorigin="anonymous"/>
+    <link rel="preload" as="font" href="%PUBLIC_URL%/css/fonts/opensans/OpenSans-Light-webfont.woff" type="font/woff" crossorigin="anonymous"/>
+    <link rel="preload" as="font" href="%PUBLIC_URL%/css/fonts/opensans/OpenSans-Semibold-webfont.woff" type="font/woff" crossorigin="anonymous"/>
+    <link rel="preload" as="font" href="%PUBLIC_URL%/css/fonts/opensans/OpenSans-Bold-webfont.woff" type="font/woff" crossorigin="anonymous" />
+    <link rel="preload" as="font" href="%PUBLIC_URL%/css/fonts/librebaskerville/librebaskerville-italic-webfont.woff" type="font/woff" crossorigin="anonymous"/>
+    <link rel="preload" as="font" href="%PUBLIC_URL%/css/fonts/librebaskerville/librebaskerville-regular-webfont.woff" type="font/woff" crossorigin="anonymous"/>
+  
   </body>
 </html>

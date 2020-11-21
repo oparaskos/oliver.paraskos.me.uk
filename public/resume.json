@@ -17,6 +17,11 @@
         },
         "profiles": [
             {
+                "network": "Steam",
+                "username": "oparaskos",
+                "url": "https://steamcommunity.com/id/oparaskos"
+            },
+            {
                 "network": "GitHub",
                 "username": "oparaskos",
                 "url": "https://github.com/oparaskos"
@@ -114,7 +119,6 @@
     "skills": [
         {
             "name": "Agile",
-            "level": "Master",
             "keywords": [
                 "Scrum",
                 "Kanban"
@@ -122,7 +126,6 @@
         },
         {
             "name": "Java",
-            "level": "Master",
             "keywords": [
                 "Java",
                 "JVM",
@@ -135,14 +138,12 @@
         },
         {
             "name": "Kotlin",
-            "level": "Master",
             "keywords": [
                 "ktor"
             ]
         },
         {
             "name": "AWS",
-            "level": "Master",
             "keywords": [
                 "DynamoDB",
                 "S3",
@@ -160,7 +161,6 @@
         },
         {
             "name": "NoSQL Document Databases",
-            "level": "Master",
             "keywords": [
                 "DynamoDB",
                 "MongoDB"
@@ -168,7 +168,6 @@
         },
         {
             "name": "Web Development",
-            "level": "Master",
             "keywords": [
                 "HTML5",
                 "CSS",
@@ -178,16 +177,13 @@
             ]
         },
         {
-            "name": "Node.js",
-            "level": "Master"
+            "name": "Node.js"
         },
         {
-            "name": "Python",
-            "level": "Good"
+            "name": "Python"
         },
         {
-            "name": "C#",
-            "level": "Good"
+            "name": "C#"
         }
     ],
     "languages": [
