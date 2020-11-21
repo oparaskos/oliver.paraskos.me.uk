@@ -33,7 +33,11 @@
       <header>
         <div className="row">
            <div className="three columns">
-              <img className="profile-pic" style="width: 100%; height: 100vh;margin:0;padding:0" src="%PUBLIC_URL%/images/header-background.jpg" />
+              <picture>
+                <source srcset="%PUBLIC_URL%/images/header-background.webp" type="image/webp">
+                <source srcset="%PUBLIC_URL%/images/header-background.jpg" type="image/jpeg" />
+                <img className="profile-pic" style="width: 100%; height: 100vh;margin:0;padding:0" src="%PUBLIC_URL%/images/header-background.jpg" />
+              </picture>
            </div>
            <div className="nine columns main-col">
               <div>
