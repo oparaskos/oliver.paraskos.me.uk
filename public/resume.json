@@ -50,12 +50,12 @@
             "position": "Senior Software Engineer",
             "website": "https://tryflux.com",
             "startDate": "2019-01-01",
-            "summary": "Low latency, high throughput transaction data matching between banks and retailers with realtime delivery of results to end-users.",
+            "summary": "Low latency, high throughput transaction data matching between banks and retailers with realtime delivery of results to end-users. Fast analytics on real-time high volume data.",
             "highlights": [
                 "Design and Implementation of larger system features",
                 "Integration with third parties using widely varying specs and contracts",
                 "FCA, GDPR, ISO-27001, eIDAS/PSD2 Compliance",
-                "Maintenance of existing systems"
+                "Maintenance of existing systems, Bug fixes etc."
             ]
         },
         {
@@ -125,6 +125,15 @@
             ]
         },
         {
+            "name": "Kotlin",
+            "keywords": [
+                "ktor",
+                "Kodein",
+                "dropwizard",
+                "kotest"
+            ]
+        },
+        {
             "name": "Java",
             "keywords": [
                 "Java",
@@ -134,12 +143,6 @@
                 "JRE",
                 "Spring",
                 "Dropwizard"
-            ]
-        },
-        {
-            "name": "Kotlin",
-            "keywords": [
-                "ktor"
             ]
         },
         {
@@ -171,25 +174,34 @@
             "keywords": [
                 "HTML5",
                 "CSS",
-                "Javascript",
-                "ECMAScript",
-                "TypeScript"
+                "React",
+                "Angular"
             ]
         },
         {
-            "name": "Node.js"
+            "name": "Node.js",
+            "keywords": [
+                "nestjs",
+                "Typescript",
+                "AWS Lambdas"
+            ]
         },
         {
-            "name": "Python"
-        },
-        {
-            "name": "C#"
+            "name": "Python",
+            "keywords": [
+                "jupyter",
+                "pandas"
+            ]
         }
     ],
     "languages": [
         {
             "language": "English",
             "fluency": "Native speaker"
+        },
+        {
+            "language": "German",
+            "fluency": "Beginner, Learning"
         }
     ]
 }

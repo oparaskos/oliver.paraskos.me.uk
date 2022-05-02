@@ -68,7 +68,7 @@ header .banner-text h1 {
    margin: 0 auto 18px auto;
    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 }
-header .banner-text h2 {
+header .banner-text .subheading {
    font: 2.4rem 'librebaskerville-regular', serif;
    color: #DDE3DC;
    margin: 0 auto;
