@@ -49,7 +49,7 @@ const Header = ({ data }) => {
       </span>
       name = data.basics.name;
       occupation= data.basics.label;
-      description= data.basics.summary || <span>Currently working at {currentEmployer}</span>;
+      description= currentEmployer ? <span>Currently working at {currentEmployer}</span> : <span />;
       city = data.basics.location.city;
       profiles = data.basics.profiles;
       loading = false;

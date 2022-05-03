@@ -21,11 +21,13 @@
     "react-helmet": "^6.1.0",
     "react-scripts": "4.0.0",
     "react-scroll": "^1.8.1",
+    "jsonresume-theme-paper": "^0.5.0",
+    "resume-cli": "^3.0.7",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "prebuild": "npx browserslist@latest --update-db",
+    "prebuild": "resume export public/resume.pdf -r public/resume.json --format pdf --theme paper",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
