@@ -44,6 +44,8 @@ jobs:
     - uses: actions/download-artifact@v2
       with:
         name: build
+    - run: ls
+    - run: unzip build.zip
     - uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
