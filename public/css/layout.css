@@ -95,28 +95,6 @@ a[rel='noreferrer noopener'] { position: relative;
    transition: all 1s;
 }
 
-a[rel='noreferrer noopener']:hover::after {
-   color: #11ABB0ff;
-}
-
-a[rel='noreferrer noopener']::after {
-   content: '↗';
-   display: block;
-   position: absolute;
-   width: 2rem;
-   top: 0;
-   right: 0;
-   height: 2rem;
-   text-align: center;
-   line-height: 2rem;
-   margin-right: -1rem;
-   margin-top: -1rem;
-   color: #ffffff17;
-   text-shadow: none;
-   font-size: 2rem;
-   transition: all 1s;
-}
-
 header .banner-text hr {
    width: 60%;
    margin: 18px auto 24px auto;
