@@ -55,6 +55,7 @@
                 "Maintain and upgrade existing kotlin, ktor and dropwizard codebase.",
                 "Led the development of a new highly-flexible and extensible realtime cashback-offer system.",
                 "Produced low-latency merchant analytics and insights dashboards.",
+                "Push for technologies that enable better discovery and maintenance of internal systems using SourceGraph and Backstage/Roadie.",
                 "Completely retooled the infrastructure code base to better facilitate developer independence from the platform team. This facilitated much faster turn around time for new features.",
                 "Integration with third parties using widely varying specs and contracts, including OpenBanking and other proprietary banking APIs.",
                 "Mentorship of junior developers.",
