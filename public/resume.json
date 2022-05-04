@@ -50,11 +50,15 @@
             "position": "Senior Software Engineer",
             "website": "https://tryflux.com",
             "startDate": "2019-01-01",
-            "summary": "Flux is a Digital receipts platform which links bank and merchant data for the purposes of offers, analytics, and reduced emissions. It's a low latency, high throughput platform that integrates with multiple  banks and retailers. Near-realtime delivery of results to end-users. Fast analytics on high volume data. High data-security and privacy focus.",
+            "summary": "Flux is a Digital receipts platform which links bank and merchant data for the purposes of offers, analytics, and reduced emissions. It's a low latency, high throughput platform that integrates with multiple banks and retailers with rapid delivery of results to end-users.",
             "highlights": [
-                "Design and Implementation of larger system features using Kotlin and a mix of Ktor and Dropwizard",
-                "Integration with third parties using widely varying specs and contracts, including OpenBanking and other proprietary banking APIs",
-                "FCA, GDPR, ISO-27001, eIDAS/PSD2 Compliance"
+                "Maintain and upgrade existing kotlin, ktor and dropwizard codebase.",
+                "Led the development of a new highly-flexible and extensible realtime cashback-offer system.",
+                "Produced low-latency merchant analytics and insights dashboards.",
+                "Completely retooled the infrastructure code base to better facilitate developer independence from the platform team. This facilitated much faster turn around time for new features.",
+                "Integration with third parties using widely varying specs and contracts, including OpenBanking and other proprietary banking APIs.",
+                "Mentorship of junior developers.",
+                "FCA, GDPR, ISO-27001, eIDAS/PSD2 Compliance."
             ]
         },
         {
@@ -65,12 +69,12 @@
             "endDate": "2019-01-01",
             "summary": "Part of a team working on a high-performance REST-API based delivery options and shipping API which caters to several high profile and high volume retailers, across many carriers. Planning and consideration of architecture that supports zero-downtime deployments and high throughput with a fast response.",
             "highlights": [
-                "Java/SpringBoot",
+                "Designed and created a service to aide in zone skipping and shipping calculation",
                 "AWS incl. Lambda, ECS, API GW, ALB, CloudFront, S3, Kinesis, etc.",
-                "Containerising, provisioning and deploying to ECS clusters",
-                "Migrated Ansible infrastructure to clean devops-friendly Terraform",
-                "Serverless and Asynchronous API design and architecture",
-                "Development of new features, and bugfixes in a stack composed of Groovy, Go, Java, JavaScript, and Python."
+                "Containerising, provisioning and deploying to ECS clusters.",
+                "Migrated Ansible infrastructure to Terraform to support a dev-ops culture.",
+                "Serverless and Asynchronous API design and architecture.",
+                "Highly diverse tech stack composed of Groovy, Go, Java (Springboot), JavaScript, and Python."
             ]
         },
         {
@@ -81,9 +85,9 @@
             "endDate": "2018-04-01",
             "summary": "Develop critical parts of a scalable submission and peer review platform and piecemeal replacement of WebLogic monolith.",
             "highlights": [
-                "Java/SpringBoot microservices on AWS",
-                "Angular 1 & 2, JavaScript and TypeScript, Node.js",
-                "TDD and Training of Graduate software developers"
+                "Java/SpringBoot microservices on AWS.",
+                "Angular 1 & 2, JavaScript and TypeScript, Node.js.",
+                "TDD and Training of Graduate software developers."
             ]
         },
         {
@@ -94,10 +98,10 @@
             "endDate": "2016-03-01",
             "summary": "Liaising and collaborating with other developers, creating software specifications, reporting progress and estimating time scales, in addition to code and unit tests.",
             "highlights": [
-                "Java Database Integration using Hibernate (Microsoft SQL, HSSQL, MySQL)",
-                "Rewriting and refactoring large parts of a legacy codebase",
-                "Participation in frequent software architecture/design meetings",
-                "Strong communication with QA to address key issues as they arise"
+                "Java Database Integration using Hibernate (Microsoft SQL, HSSQL, MySQL).",
+                "Rewriting and refactoring large parts of a legacy codebase.",
+                "Participation in frequent software architecture/design meetings.",
+                "Strong communication with QA to address key issues as they arise."
             ]
         },
         {
@@ -111,7 +115,7 @@
                 "Maintenance and upgrades to a recruitment website written in PHP, as well as the specification for its replacement.",
                 "Development of dynamic, responsive frontends to multiple applications.",
                 "Use of XPath for automated website scraping.",
-                "Database Integration with C# using Linq"
+                "Database Integration with C# using Linq."
             ]
         }
     ],
