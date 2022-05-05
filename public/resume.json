@@ -84,11 +84,13 @@
             "website": "https://elsevier.com",
             "startDate": "2016-03-01",
             "endDate": "2018-04-01",
-            "summary": "Develop critical parts of a scalable submission and peer review platform and piecemeal replacement of WebLogic monolith.",
+            "summary": "Developed critical parts of a scalable submission and peer review platform and piecemeal replacement of WebLogic monolith.",
             "highlights": [
-                "Java/SpringBoot microservices on AWS.",
-                "Angular 1 & 2, JavaScript and TypeScript, Node.js.",
-                "TDD and Training of Graduate software developers."
+                "Led the engineering of a search engine component to help journal editors find appropriate reviewers",
+                "Piecemeal replacement of Oracle/WebLogic monolith with Java SE/SpringBoot microservices on AWS",
+                "New front-end components written in Angularjs and Angular 2, JavaScript and TypeScript, Node.js",
+                "I was instrumental in driving the adoption of TDD as a core principle.",
+                "I trained new software developers who'd joined as part of the graduate programme"
             ]
         },
         {
