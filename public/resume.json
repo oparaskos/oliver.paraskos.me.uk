@@ -151,6 +151,13 @@
             "name": "Cyber Security"
         }
     ],
+    "education": [{
+      "institution": "Oxford Brookes University",
+      "area": "Computer Science",
+      "studyType": "BSc 1st Class Honours",
+      "startDate": "2012",
+      "endDate": "2015"
+    }],
     "skills": [
         {
             "name": "Kotlin",
