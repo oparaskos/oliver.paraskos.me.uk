@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
     "basics": {
         "name": "Oliver Paraskos",
         "fullName": "Oliver Zeno Paraskos",
@@ -7,7 +8,7 @@
         "email": "oparaskos@gmail.com",
         "phone": "(+44) 07784 196 221",
         "website": "https://oliver.paraskos.me.uk",
-        "summary": "I'm looking for a product I can get behind, at an environmentally and ethically conscious company.",
+        "summary": "I'm a British citizen, and a senior software engineer with more than 10 years experience; I'm looking for a product I can get behind, at an environmentally and ethically conscious company.",
         "location": {
             "address": "",
             "postalCode": "",
@@ -52,12 +53,12 @@
             "startDate": "2019-01-01",
             "summary": "Flux is a Digital receipts platform which links bank and merchant data for the purposes of offers, analytics, and reduced emissions. It's a low latency, high throughput platform that integrates with multiple banks and retailers with rapid delivery of results to end-users.",
             "highlights": [
+                "I bought to market a new low-latency merchant analytics and insights dashboards using React, ktor and DBT to build a data pipeline. This garnered interest from major high-street players.",
+                "I led the development of a new and highly successful highly-flexible and extensible realtime cashback-offer system, which is now used by more than 20 currently active retailers of various sizes.",
+                "Push for technologies that enable better discovery and maintenance of internal systems using SourceGraph and Backstage/Roadie. This improved developer onboarding, knowledge transfer and discovery.",
+                "Completely retooled the infrastructure code base to better facilitate developer independence from the platform team. This facilitated much faster turn around time for new features, and saves many hours per day.",
+                "Integration with third parties including banks and retailers using widely varying specs/contracts, including OpenBanking and other proprietary APIs.",
                 "Maintain and upgrade existing kotlin, ktor and dropwizard codebase.",
-                "Led the development of a new highly-flexible and extensible realtime cashback-offer system.",
-                "Produced low-latency merchant analytics and insights dashboards using React, ktor and DBT to build a data pipeline.",
-                "Push for technologies that enable better discovery and maintenance of internal systems using SourceGraph and Backstage/Roadie.",
-                "Completely retooled the infrastructure code base to better facilitate developer independence from the platform team. This facilitated much faster turn around time for new features.",
-                "Integration with third parties using widely varying specs and contracts, including OpenBanking and other proprietary banking APIs.",
                 "Mentorship of junior developers.",
                 "FCA, GDPR, ISO-27001, eIDAS/PSD2 Compliance."
             ]
@@ -70,12 +71,10 @@
             "endDate": "2019-01-01",
             "summary": "Part of a team working on a high-performance REST-API based delivery options and shipping API which caters to several high profile and high volume retailers, across many carriers. Planning and consideration of architecture that supports zero-downtime deployments and high throughput with a fast response.",
             "highlights": [
-                "Designed and created a service to aide in zone skipping and shipping calculation",
-                "AWS incl. Lambda, ECS, API GW, ALB, CloudFront, S3, Kinesis, etc.",
-                "Containerising, provisioning and deploying to ECS clusters.",
-                "Migrated Ansible infrastructure to Terraform to support a dev-ops culture.",
-                "Serverless and Asynchronous API design and architecture.",
-                "Highly diverse tech stack composed of Groovy, Go, Java (Springboot), JavaScript, and Python."
+                "Designed and created a service to aide in zone skipping and shipping calculation, saving customers money and reducing shipping carbon footprints.",
+                "Migrating a one-service-per-instance half-in ansible infrastructure to a containerised, fully code-provisioned (IaC) ECS cluster. This helped support developers to deploy their own changes with only limited support from the dedicated platform team.",
+                "Serverless and Asynchronous API design and architecture, high redundancy and fault tolerance using Hysterix Circuit breakers and load balancing to provide >99.99% uptime and <100ms response times.",
+                "Highly diverse polyglot tech stack composed of Groovy, Go, Java (Springboot), JavaScript, and Python."
             ]
         },
         {
@@ -120,6 +119,36 @@
                 "Use of XPath for automated website scraping.",
                 "Database Integration with C# using Linq."
             ]
+        }
+    ],
+    "interests": [
+        {
+            "name": "The Environment",
+            "keywords": [
+                "Carbon Footprinting",
+                "Air Quality",
+                "Green Tech",
+                "Clean Energy"
+            ]
+        },
+        {
+            "name": "Electronics",
+            "keywords": [
+                "Embedded development",
+                "Arduino",
+                "ESP",
+                "IoT"
+            ]
+        },
+        {
+            "name": "Computer Graphics",
+            "keywords": ["3D Modelling", "Rendering", "Computer Aided Design", "3D Printing", "Games"]
+        },
+        {
+            "name": "Machine Learning"
+        },
+        {
+            "name": "Cyber Security"
         }
     ],
     "skills": [

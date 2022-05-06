@@ -9,6 +9,7 @@ class About extends Component {
       if (this.props.data) {
          var name = this.props.data.name;
          var profilepic = this.props.data.image;
+         var interests = this.props.interests;
          var bio = this.props.data.bio || this.props.data.summary;
          var download = process.env.PUBLIC_URL + "/resume.pdf";
       }
@@ -32,6 +33,19 @@ class About extends Component {
                         </p>
                      </div>}
                   </div>
+                  {interests && (<div className='row'>
+                     <div className='twelve columns' id="interests">
+                        <h2>My Interests</h2>   
+                        <ul className='interests'>
+                           {interests.map((interest, index) => (<li key={index}>
+                              <span className='name'>{interest.name}</span>
+                              {interest.keywords && (<ul className='keywords'>
+                                 {interest.keywords.map((it, i) => (<li key={i}>{it}</li>))}
+                              </ul>)}
+                           </li>))}
+                        </ul>
+                     </div>
+                  </div>)}
                </div>
             </div>
 

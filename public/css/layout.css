@@ -965,3 +965,29 @@ footer .social-links li:first-child { margin-left: 0; }
  	border-radius: 100%;
 }
 #go-top a:hover { background-color: #0F9095; }
+
+#interests  {
+   padding-top: 24px;
+}
+
+#interests ul.interests {
+   margin: 0;
+}
+
+#interests ul.interests > li > .name {
+   font-weight: bold;
+   color: #acacac;
+}
+
+#interests ul.interests .keywords {
+   margin: 1rem 0 1rem 0;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+#interests ul.interests .keywords > li {
+   display: block;
+   padding: 0 1rem 0 0;
+   margin: 0;
+
+}

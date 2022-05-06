@@ -35,7 +35,7 @@ function App() {
       </Helmet>
       }
       <Header data={resume} />
-      <About data={resume.basics} />
+      <About data={resume.basics} interests={resume.interests} />
       <Resume data={resume} />
       {resume.portfolio && <Portfolio data={resume.portfolio} />}
       {resume.testimonials && <Testimonials data={resume.testimonials} />}
