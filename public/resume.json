@@ -53,7 +53,7 @@
             "startDate": "2019-01-01",
             "summary": "Flux is a Digital receipts platform which links bank and merchant data for the purposes of offers, analytics, and reduced emissions. It's a low latency, high throughput platform that integrates with multiple banks and retailers with rapid delivery of results to end-users.",
             "highlights": [
-                "Brought to market a new low-latency merchant analytics and insights dashboards using React, ktor and DBT to build a data pipeline. This garnered interest from major high-street retailers.",
+                "Brought to market new low-latency merchant analytics and insights dashboards using React, ktor and DBT to build a data pipeline. This garnered interest from major high-street retailers.",
                 "Led the development of a new and highly successful highly-flexible and extensible realtime cashback-offer system, which is now used by more than 20 currently active retailers of various sizes.",
                 "Push for technologies that enable better discovery and maintenance of internal systems using SourceGraph and Backstage/Roadie. This improved developer onboarding, knowledge transfer and discovery.",
                 "Completely retooled the infrastructure code base to better facilitate developer independence from the platform team. This facilitated much faster turn around time for new features, and saves many hours per day.",
