@@ -52,4 +52,4 @@ jobs:
         aws-region: us-east-1
     - run: aws s3 sync build/ s3://oliver.paraskos.me.uk/
     # NB should only need to invalidate index.html since the generated js, css, etc files have id's attached to them
-    - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths /index.html /resume.pdf /resume.json /css/*.css
+    - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths /index.html /resume.pdf /resume.json /css/layout.css
