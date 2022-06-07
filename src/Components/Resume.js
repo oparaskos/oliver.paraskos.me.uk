@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { SkillsList } from './SkillsList';
 import Work from './Work';
+import { DateRange } from './DateRange';
 
 class Resume extends Component {
   render() {
@@ -10,9 +11,17 @@ class Resume extends Component {
       var data = this.props.data;
       var skillmessage = this.props.data.skillmessage;
       var education = this.props.data.education && this.props.data.education.map(function (education) {
-        return <div key={education.school} itemProp="alumniOf"><h3>{education.school}</h3>
-          <p className="info">{education.degree} <span>&bull;</span><em className="date">{education.graduated}</em></p>
-          <p>{education.description}</p></div>
+        return (<div key={education.school || education.institution} itemProp="alumniOf">
+            <h3>{education.school || education.institution}</h3>
+            <p className="info">
+              {education.studyType}
+              <span>&bull;</span>
+              {education.area}
+              <span>&bull;</span>
+              <DateRange startDate={education.startDate} endDate={education.endDate} />
+            </p>
+            <p>{education.description}</p>
+          </div>);
       })
     }
 

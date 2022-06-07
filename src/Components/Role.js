@@ -1,31 +1,6 @@
 import React from 'react';
-import { format } from 'date-fns';
+import { DateRange } from './DateRange';
 
-const EndDate = ({ endDate, fmtString = "MMMM yyyy" }) => {
-    if(endDate) {
-        return <time
-            itemProp="endDate"
-            dateTime={endDate.toISOString()}>
-                {format(endDate, fmtString)}
-        </time>;
-    } else {
-        return <span>Present</span>;
-    }
-}
-
-const StartDate = ({ startDate, fmtString = "MMMM yyyy" }) => {
-    return <time
-        itemProp="startDate"
-        dateTime={startDate.toISOString()}>
-            {format(startDate, fmtString)}
-    </time>;
-}
-
-const DateRange = ({ startDate, endDate }) => {
-    return <em className="date">
-        <StartDate startDate={startDate} />&nbsp;&ndash;&nbsp;<EndDate endDate={endDate} />
-    </em>;
-}
 
 export const Role = ({ work }) => {
     const startDate = work.startDate && new Date(work.startDate);
