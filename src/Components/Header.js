@@ -39,17 +39,14 @@ const Header = ({ data }) => {
    var loading = true;
 
    if (data && data.basics) {
-      var currentEmployer = <span>
-         {data.work
-            .filter((it) => !it.endDate)
-            .map((work) => <a key={work.company} href={work.website} itemProp="affiliation" rel="noreferrer noopener">
-                  {work.company.split(/\s+/).join("\u00A0")}
-               </a>
-            )}
-      </span>
+      var currentEmployer = data.work.filter((it) => !it.endDate)
       name = data.basics.name;
-      occupation= data.basics.label;
-      description= currentEmployer ? <span>Currently working at {currentEmployer}</span> : <span />;
+      occupation = data.basics.label;
+      description = (currentEmployer && currentEmployer.length > 0) ? <span>Currently working at {currentEmployer
+         .map((work) => <a key={work.company} href={work.website} itemProp="affiliation" rel="noreferrer noopener">
+               {work.company.split(/\s+/).join("\u00A0")}
+            </a>
+         )}.</span> : <span />;
       city = data.basics.location.city;
       profiles = data.basics.profiles;
       loading = false;
@@ -83,7 +80,7 @@ const Header = ({ data }) => {
             <div className="banner-text">
                { loading && <p>Loading...</p> }
                { !loading && <h1 className="responsive-headline">I'm <span itemProp="name">{name}</span>.</h1>}
-               <h2 className="subheading">I'm a <span itemProp="homeLocation">{city}</span> based <span itemProp="jobTitle">{occupation}</span>. {description}.</h2>
+               <h2 className="subheading">I'm a <span itemProp="homeLocation">{city}</span> based <span itemProp="jobTitle">{occupation}</span>. {description}</h2>
                <hr />
                <ul className="social">
                   <Socials profiles={profiles} />

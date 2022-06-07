@@ -51,6 +51,7 @@
             "position": "Senior Software Engineer",
             "website": "https://tryflux.com",
             "startDate": "2019-01-01",
+            "endDate": "2022-06-01",
             "summary": "Flux is a Digital receipts platform which links bank and merchant data for the purposes of offers, analytics, and reduced emissions. It's a low latency, high throughput platform that integrates with multiple banks and retailers with rapid delivery of results to end-users.",
             "highlights": [
                 "Brought to market new low-latency merchant analytics and insights dashboards using React, ktor and DBT to build a data pipeline. This garnered interest from major high-street retailers.",
