@@ -39,14 +39,9 @@ const Header = ({ data }) => {
    var loading = true;
 
    if (data && data.basics) {
-      var currentEmployer = data.work.filter((it) => !it.endDate)
       name = data.basics.name;
       occupation = data.basics.label;
-      description = (currentEmployer && currentEmployer.length > 0) ? <span>Currently working at {currentEmployer
-         .map((work) => <a key={work.company} href={work.website} itemProp="affiliation" rel="noreferrer noopener">
-               {work.company.split(/\s+/).join("\u00A0")}
-            </a>
-         )}.</span> : <span />;
+      description = data.basics.description;
       city = data.basics.location.city;
       profiles = data.basics.profiles;
       loading = false;
