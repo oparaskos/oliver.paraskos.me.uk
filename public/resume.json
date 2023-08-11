@@ -71,7 +71,7 @@
         },
         {
             "company": "Metapack",
-            "position": "Software Engineer",
+            "position": "Senior Software Engineer",
             "website": "https://metapack.com",
             "startDate": "2018-04-01",
             "endDate": "2019-01-01",
@@ -85,7 +85,7 @@
         },
         {
             "company": "Elsevier",
-            "position": "Software Engineer",
+            "position": "Software Engineer III",
             "website": "https://elsevier.com",
             "startDate": "2016-03-01",
             "endDate": "2018-04-01",
@@ -132,18 +132,8 @@
             "name": "The Environment",
             "keywords": [
                 "Carbon Footprinting",
-                "Air Quality",
                 "Green Tech",
                 "Clean Energy"
-            ]
-        },
-        {
-            "name": "Electronics",
-            "keywords": [
-                "Embedded development",
-                "Arduino",
-                "ESP",
-                "IoT"
             ]
         },
         {
