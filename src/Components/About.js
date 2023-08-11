@@ -23,13 +23,13 @@ class About extends Component {
                <div className="nine columns main-col">
                   {bio && (<div>
                      <h2>About Me</h2>
-                     <p>{bio}</p>
+                     <p>{bio.split('\n').map(it => <p>{it}</p>)}</p>
                   </div>)}
                   <div className="row">
                      <ContactDetails data={this.props.data} />
                      {download && <div className="columns download">
                         <p>
-                           <a href={download} className="button"><FontAwesomeIcon icon={faDownload} />Download Resume</a>
+                           <a href={download} className="button"><FontAwesomeIcon icon={faDownload} className='button-icon' />Download Resume</a>
                         </p>
                      </div>}
                   </div>

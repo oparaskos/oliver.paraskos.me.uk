@@ -75,7 +75,9 @@ const Header = ({ data }) => {
             <div className="banner-text">
                { loading && <p>Loading...</p> }
                { !loading && <h1 className="responsive-headline">I'm <span itemProp="name">{name}</span>.</h1>}
-               <h2 className="subheading">I'm a <span itemProp="homeLocation">{city}</span> based <span itemProp="jobTitle">{occupation}</span>. {description}</h2>
+               <h2 className="subheading">
+                  {description || <>I'm a <span itemProp="homeLocation">{city}</span> based <span itemProp="jobTitle">{occupation}</span>.</>}
+               </h2>
                <hr />
                <ul className="social">
                   <Socials profiles={profiles} />

@@ -254,8 +254,9 @@ ul#nav li.current a { color: #F06000; }
    background: #fff;
    color: #2B2B2B;
 }
-#about .download .button i {
-   margin-right: 15px;
+
+#about .download .button .button-icon {
+   margin-right: 0.5rem;
    font-size: 20px;
 }
 

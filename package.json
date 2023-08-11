@@ -27,7 +27,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "prebuild": "resume export public/resume.pdf -r public/resume.json --format pdf --theme paper",
+    "convert:resume:json": "yaml2json -s -p public/resume.yml",
+    "convert:resume:pdf": "resume export public/resume.pdf -r public/resume.yml --format pdf --theme paper",
+    "prebuild": "npm run convert:resume:json && npm run convert:resume:pdf",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -49,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "yamljs": "^0.3.0"
   }
 }
