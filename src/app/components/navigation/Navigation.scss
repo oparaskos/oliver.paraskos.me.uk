@@ -1,0 +1,90 @@
+@import "../../variables.scss";
+
+$linkInactive: #fff;
+$linkActive: #F06000;
+$navBackground: #333333;
+
+nav.desktop {
+    display: none
+}
+
+@media screen and (min-width: 768px) { 
+    /**
+    Fade the scrollbar out while on hero/header and then use an opaque background when past the fold.
+    */
+    html[data-scroll_past_fold=true] {
+        &:not([data-scroll='0']) {
+            nav.desktop {
+                background-color: $navBackground;
+                transition: 0.4s;
+            }
+        }
+    }
+    html[data-scroll_past_fold=false] {
+        &:not([data-scroll='0']) {
+            nav.desktop {
+                opacity: 0;
+                transition: 0.2s;
+            }
+        }
+    }
+    nav.desktop {
+        display: block;
+        font: 12px $font-family-regular;
+        width: 100%;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        margin: 0 auto;
+        z-index: 100;
+        position: fixed;
+        left: 0;
+        top: 0;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+            min-height: 48px;
+            width: auto;
+            text-align: center;
+            li {
+                margin: 0;
+                padding: 0;
+                border: none;
+                outline: none;
+                position: relative;
+                list-style: none;
+                height: 48px;
+                display: inline-block;
+                a {
+                    display: inline-block;
+                    padding: 8px 13px;
+                    line-height: 32px;
+                    text-decoration: none;
+                    text-align: left;
+                    color: $linkInactive;
+                    -webkit-transition: color .2s ease-in-out;
+                    -moz-transition: color .2s ease-in-out;
+                    -o-transition: color .2s ease-in-out;
+                    -ms-transition: color .2s ease-in-out;
+                    transition: color .2s ease-in-out;
+                }
+            }
+            li.current {
+                a {
+                    color: $linkActive;
+                }
+            }
+        }
+        a {
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+        }
+        >a.mobile-btn {
+            display: none;
+        }
+    }
+}

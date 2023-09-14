@@ -1,0 +1,21 @@
+$color_white: #fff;
+$color_black: #000;
+$color_sea_green: #11ABB0;
+$color_turquoise_green: #096751;
+
+$color_text_default: #838C95;
+$color_background: #0f0f0f;
+
+$color_primary: $color_sea_green;
+$color_primary_visited: $color_sea_green;
+$color_primary_hover: $color_sea_green;
+
+$font-family-mono: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+$font-family-regular: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$font-family-subheading: 'Libre Baskerville', 'Baskerville', serif;
+
+$font-default-regular: $font-family-regular;
+$font-default-bold: $font-family-regular;
+$font-default-italic: $font-family-regular;
+$font-quote: $font-family-regular;
+$font-subheading: $font-family-subheading;

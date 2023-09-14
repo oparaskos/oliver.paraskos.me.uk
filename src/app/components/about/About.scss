@@ -1,0 +1,70 @@
+@import "../../variables.scss";
+
+$color_3: #acacac;
+$color_4: #2B2B2B;
+
+#about {
+	background: #2B2B2B;
+	padding-top: 96px;
+	padding-bottom: 66px;
+	overflow: hidden;
+	h2 {
+		font: 22px/30px $font-family-regular;
+		color: $color_white;
+		margin-bottom: 12px;
+	}
+	.address {
+		line-height: 30px;
+		color: $color_3;
+	}
+	.profile-pic {
+		position: relative;
+		width: 120px;
+		height: 120px;
+		border-radius: 100%;
+	}
+	.contact-details {
+		width: 41.66667%;
+	}
+	.download {
+		width: 58.33333%;
+		padding-top: 6px;
+		.button {
+			margin-top: 6px;
+			background: #444;
+			&:hover {
+				background: #fff;
+				color: $color_4;
+			}
+			.button-icon {
+				margin-right: 0.5rem;
+				font-size: 20px;
+			}
+		}
+	}
+	.main-col {
+		padding-right: 5%;
+	}
+}
+#interests {
+	padding-top: 24px;
+	ul.interests {
+		margin: 0;
+		>li {
+			>.name {
+				font-weight: bold;
+				color: $color_3;
+			}
+		}
+		.keywords {
+			margin: 1rem 0 1rem 0;
+			display: flex;
+			justify-content: space-evenly;
+			>li {
+				display: block;
+				padding: 0 1rem 0 0;
+				margin: 0;
+			}
+		}
+	}
+}

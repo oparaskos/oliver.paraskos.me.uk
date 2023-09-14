@@ -1,0 +1,94 @@
+$foreground: #0D0D0D;
+$foregroundAlt: #fff;
+$background-color_1: transparent;
+$backgroundAlt: #212529;
+$background-color_3: rgba(0, 0, 0, .05);
+$tableBorder: #32383e;
+
+table.rate-card {
+    line-height: 1.5;
+    color: $foreground;
+    text-align: left;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: $background-color_1;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    th {
+       line-height: 1.5;
+       border-collapse: collapse;
+       box-sizing: border-box;
+       text-align: inherit;
+       padding: .75rem;
+       vertical-align: bottom;
+       border-bottom: 2px solid #dee2e6;
+       color: $foregroundAlt;
+       background-color: $backgroundAlt;
+       border-color: $tableBorder;
+      
+    }
+
+
+    thead {
+       th {
+          &:first-of-type {
+             border-top-left-radius: 10px;
+          }
+
+          &:last-of-type {
+             border-top-right-radius: 10px;
+          }
+       }
+    }
+
+    td {
+       line-height: 1.5;
+       color: $foreground;
+       text-align: left;
+       border-collapse: collapse;
+       box-sizing: border-box;
+       padding: .75rem;
+       vertical-align: top;
+
+       &.not-offered {
+          background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M100 0 L0 100 ' stroke='black' stroke-width='1'/><path d='M0 0 L100 100 ' stroke='black' stroke-width='1'/></svg>");
+          background-repeat:no-repeat;
+          background-position:center center;
+          background-size: 100% 100%, auto;
+          opacity: 0.5;
+       }
+    }
+
+    tbody {
+       tr {
+          &:nth-of-type(odd) {
+             background-color: $background-color_3;
+          }
+
+          &:last-child {
+             border-bottom-left-radius: 10px;
+
+             th:first-child {
+                border-bottom-left-radius: 10px;
+                border: 0 none;
+             }
+          }
+       }
+    }
+
+    tr {
+       &:last-of-type {
+          td {
+             &:first-of-type {
+                border-bottom-left-radius: 10px;
+             }
+
+             &:last-of-type {
+                border-bottom-right-radius: 10px;
+             }
+          }
+       }
+    }
+ }

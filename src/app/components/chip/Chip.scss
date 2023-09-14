@@ -1,0 +1,22 @@
+.chip {
+    display: inline-block;
+    height: 50px;
+    margin: 0 1rem;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+    padding: 0;
+
+    span {
+        padding: 0 1em;
+    }
+
+    .icon {
+        border-bottom-left-radius: 25px;
+        border-top-left-radius: 25px;
+        height: 50px;
+        display: inline-block;
+        background: #e0e0e0;
+    }
+}

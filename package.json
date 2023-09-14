@@ -1,58 +1,38 @@
 {
-  "name": "oliver-paraskos-me-uk",
-  "version": "0.2.0",
+  "name": "oliver.paraskos.me.uk",
+  "version": "0.1.0",
   "private": true,
-  "homepage": "https://oliver.paraskos.me.uk",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-brands-svg-icons": "^5.15.1",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.11",
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.2.2",
-    "date-fns": "^2.16.1",
-    "imagemin": "^7.0.1",
-    "imagemin-cli": "^6.0.0",
-    "imagemin-webp": "^6.0.0",
-    "jsonresume-theme-paper": "^0.5.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-ga": "^3.3.1",
-    "react-helmet": "^6.1.0",
-    "react-scripts": "4.0.0",
-    "react-scroll": "^1.8.9",
-    "resume-cli": "^3.0.8",
-    "web-vitals": "^0.2.4"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "convert:resume:json": "yaml2json -s -p public/resume.yml",
-    "convert:resume:pdf": "resume export public/resume.pdf -r public/resume.yml --format pdf --theme paper",
-    "prebuild": "npm run convert:resume:json && npm run convert:resume:pdf",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "convert:resume:pdf": "resume export static/resume.pdf -r src/app/resume.yml --format pdf --theme paper",
+    "prebuild": "npm run convert:resume:pdf",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@fontsource/libre-baskerville": "^5.0.8",
+    "@fontsource/open-sans": "^5.0.12",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@types/node": "20.6.0",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "date-fns": "^2.30.0",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.4.19",
+    "next": "13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scroll": "^1.8.9",
+    "sass": "^1.66.1",
+    "typescript": "5.2.2"
   },
   "devDependencies": {
-    "yamljs": "^0.3.0"
+    "@types/react-scroll": "^1.8.7",
+    "jsonresume-theme-paper": "^0.5.0",
+    "resume-cli": "^3.0.8",
+    "yaml-loader": "^0.8.0"
   }
 }

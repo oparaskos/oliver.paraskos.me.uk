@@ -1,0 +1,30 @@
+@import "../../variables.scss";
+
+$color_1: #979797;
+$color_2: #191919;
+$color_4: #EBEEEE;
+
+#contact {
+	background: $color_2;
+	padding-top: 96px;
+	padding-bottom: 102px;
+	color: $color_1;
+	.section-head {
+		margin-bottom: 42px;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		color: $color_4;
+		margin-bottom: 6px;
+		white-space: nowrap;
+		svg {
+			width: 1em;
+			height: 1em;
+		}
+	}
+
+	.header-col {
+		padding-top: 6px;
+	}
+}
