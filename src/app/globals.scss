@@ -16,6 +16,7 @@ html {
 	background: transparent;
 	font-size: 62.5%;
 	-webkit-font-smoothing: antialiased;
+	scroll-behavior: smooth;
 }
 body {
 	margin: 0;
@@ -899,9 +900,8 @@ a {
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: $mobile-max-width) {
 	.row {
-		width: 460px;
 		margin: 0 auto;
 		padding: 0;
 		.row {
@@ -932,10 +932,5 @@ a {
 				}
 			}
 		}
-	}
-}
-@media only screen and (max-width: 460px) {
-	.row {
-		width: auto;
 	}
 }

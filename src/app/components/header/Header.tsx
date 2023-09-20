@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Header.scss';
 import Socials from '../socials/Socials';
 import { Navigation } from '../navigation/Navigation';
-import { Link } from '../link/Link';
+import Link from '../link/Link';
 
 
 interface HeaderProps {

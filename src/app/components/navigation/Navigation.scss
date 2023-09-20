@@ -4,87 +4,149 @@ $linkInactive: #fff;
 $linkActive: #F06000;
 $navBackground: #333333;
 
-nav.desktop {
-    display: none
+nav {
+    display: block;
+    font: 12px $font-family-regular;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    input[type=checkbox]{
+        display: none;
+        &:not(:checked) ~ ul {
+            display: none;
+        }
+        & ~ label {
+            display: block;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            cursor: pointer;
+            height: 3rem;
+            padding-top: 1.3rem;
+            span {
+                position: relative;
+                height: 0.4rem;
+                width: 3rem;
+                border-radius: 2px;
+                background-color: $linkInactive;
+                display: block;
+                transition: all .2s ease-in-out;
+                &:before {
+                    top: -10px;
+                    visibility: visible;
+                }
+                &:after {
+                    top: 10px;
+                }
+                &:before, &:after {
+                    left: 0;
+                    height: 0.4rem;
+                    width: 3rem;
+                    border-radius: 2px;
+                    background-color: $linkInactive;
+                    position: absolute;
+                    content: "";
+                    transition: all .2s ease-in-out;
+                }
+                }
+                &:hover span, &:hover span:before, &:hover span:after {
+                    background: $linkActive;
+                }
+        }
+        &:checked ~ label {
+            span {
+                background-color: transparent;
+                &:before {
+                    transform: rotate(45deg) translate(.7rem, .7rem);
+                }
+                &:after {
+                    transform: rotate(-45deg) translate(.7rem, -.7rem);
+                }
+                &::before, &::after {
+                    background-color: $linkActive;
+                }
+            }
+        }
+    }
+    
+    ul {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $navBackground;
+
+        li {
+            padding: 0;
+            margin: 0;
+            a {
+                display: block;
+                height: 48px;
+                line-height: 32px;
+                padding: 8px 13px;
+                color: $linkInactive;
+                -webkit-transition: color .2s ease-in-out;
+                -moz-transition: color .2s ease-in-out;
+                -o-transition: color .2s ease-in-out;
+                -ms-transition: color .2s ease-in-out;
+                transition: color .2s ease-in-out;
+
+                &:visited,
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $linkInactive;
+                }
+
+                &.active {
+                    color: $linkActive;
+                }
+            }
+        }
+    }
 }
 
-@media screen and (min-width: 768px) { 
-    /**
-    Fade the scrollbar out while on hero/header and then use an opaque background when past the fold.
-    */
+@media screen and (min-width: $mobile-max-width) {
     html[data-scroll_past_fold=true] {
         &:not([data-scroll='0']) {
-            nav.desktop {
+            nav {
                 background-color: $navBackground;
                 transition: 0.4s;
             }
         }
     }
+    
     html[data-scroll_past_fold=false] {
         &:not([data-scroll='0']) {
-            nav.desktop {
+            nav {
                 opacity: 0;
                 transition: 0.2s;
             }
         }
     }
-    nav.desktop {
-        display: block;
-        font: 12px $font-family-regular;
-        width: 100%;
-        text-transform: uppercase;
-        letter-spacing: 2.5px;
-        margin: 0 auto;
-        z-index: 100;
-        position: fixed;
-        left: 0;
-        top: 0;
+
+
+    nav {
+        background-color: transparent;
+        input[type=checkbox]{
+            display: none;
+            &:not(:checked) ~ ul {
+                display: flex;
+            }
+            & ~ label {
+                display: none;
+            }
+        }
 
         ul {
-            margin: 0;
-            padding: 0;
-            border: none;
-            outline: none;
-            min-height: 48px;
-            width: auto;
-            text-align: center;
-            li {
-                margin: 0;
-                padding: 0;
-                border: none;
-                outline: none;
-                position: relative;
-                list-style: none;
-                height: 48px;
-                display: inline-block;
-                a {
-                    display: inline-block;
-                    padding: 8px 13px;
-                    line-height: 32px;
-                    text-decoration: none;
-                    text-align: left;
-                    color: $linkInactive;
-                    -webkit-transition: color .2s ease-in-out;
-                    -moz-transition: color .2s ease-in-out;
-                    -o-transition: color .2s ease-in-out;
-                    -ms-transition: color .2s ease-in-out;
-                    transition: color .2s ease-in-out;
-                }
-            }
-            li.current {
-                a {
-                    color: $linkActive;
-                }
-            }
-        }
-        a {
-            margin: 0;
-            padding: 0;
-            border: none;
-            outline: none;
-        }
-        >a.mobile-btn {
-            display: none;
+            width: 100vw;
+            height: auto;
+            flex-direction: row;
         }
     }
 }

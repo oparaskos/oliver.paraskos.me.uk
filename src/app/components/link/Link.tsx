@@ -1,52 +1,61 @@
 "use client";
-import React, { PropsWithChildren } from 'react';
-import RouterLink from 'next/link';;
-import * as Scroll from 'react-scroll';
-import { usePathname, useRouter } from 'next/navigation';
+import Link from "next/link";
+import React, { PropsWithChildren, useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 interface LinkProps {
   to: string;
   className?: string;
 }
 
-export const Link: React.FC<PropsWithChildren<LinkProps>> = ({ to, children, className }) => {
-  const router = useRouter();
-  const currentPath = usePathname();
+const getHash = () => (typeof window !== 'undefined' ? decodeURIComponent(window.location.hash.replace('#', '')) : undefined);
 
-  // Check if the link contains a fragment identifier
+function determineClasses(hash: string | null, className: string | undefined, resolvedPath: string, currentPath: string, currentHash: string | undefined) {
+  const h = (hash ?? '').replace('#', '');
+  const c = [className];
+  if (resolvedPath === currentPath && h === currentHash) {
+    c.push('active');
+  }
+  if (resolvedPath === currentPath) {
+    c.push('path-match');
+  }
+  if (h === currentHash) {
+    c.push('hash-match');
+  }
+  return c;
+}
+
+function parseHref(to: string, currentPath: string) {
   const hasFragment = to.includes('#');
-  const fragment = hasFragment ? to.substring(to.indexOf('#') + 1) : null;
+  const hash = hasFragment ? to.substring(to.indexOf('#')) : null;
+  const fragment = hash?.substring(1);
   const path = to.substring(0, hasFragment ? to.indexOf('#') : undefined);
-  const scroller = Scroll.scroller;
-  
-  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
 
-    // Prevent the default behavior of anchor tags
-    event.preventDefault();
-    const resolvedPath = (path.startsWith('/') ? path : `${currentPath}/${path}`)
-      .replace(/\/+$/, '/') // handle double slash
-      .replace(/(?<=[^\/])\/+$/, ''); // remove trailing slash if its not the only path part
-    console.log({resolvedPath, currentPath, fragment})
-    if(resolvedPath !== currentPath) {
-      router.push(to, {scroll: true}) // snap straight to the right place if on another page
-    } else {
-      router.replace(to, { scroll: false }) // don't instant scroll, instead use animations and replace curent url
-      if (fragment) {
-        // Scroll to the element using react-scroll
-        scroller.scrollTo(fragment, {
-          duration: 500,
-          smooth: true,
-        });
-      } else {
-        Scroll.animateScroll.scrollToTop();
-      }
-    };
-  };
+  const resolvedPath = (path.startsWith('/') ? path : `${currentPath}/${path}`)
+    .replace(/\/+$/, '/') // handle double slash
+    .replace(/(?<=[^\/])\/+$/, ''); // remove trailing slash if it's not the only path part
+  return { resolvedPath, hash, fragment };
+}
+
+const HashActiveLink: React.FC<PropsWithChildren<LinkProps>> = ({ to, children, className }) => {
+  const currentPath = usePathname();
+  const [classes, setClasses] = useState([className]);
+
+  useEffect(() => {
+    const callback = () => {
+      const { resolvedPath, hash } = parseHref(to, currentPath);
+      const currentHash = getHash();
+      setClasses(determineClasses(hash, className, resolvedPath, currentPath, currentHash));
+    }
+    const id = setInterval(callback, 100);
+    return () => clearInterval(id);
+  }, [setClasses, currentPath, to, className]);
+
   return (
-    <a href={to} style={{ cursor: 'pointer' }} className={className} onClick={handleClick}>
+    <Link href={to} className={classes.join(' ')}>
       {children}
-    </a>
+    </Link>
   );
 };
 
-export default Link;
+export default HashActiveLink;
