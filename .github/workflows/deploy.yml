@@ -32,7 +32,7 @@ jobs:
     # - run: npm test
     - run: npm run build
     - run: mkdir out/tutoring/
-    - run: mv out/tutoring.html out/tutoring/
+    - run: mv out/tutoring.html out/tutoring/index.html
     - uses: actions/upload-artifact@v2
       with:
         name: out
