@@ -4,19 +4,23 @@ $color_3: #acacac;
 $color_4: #2B2B2B;
 
 #about {
-	background: #2B2B2B;
-	padding-top: 96px;
-	padding-bottom: 66px;
-	overflow: hidden;
+	@media screen {
+		background: #2B2B2B;
+		padding-top: 96px;
+		padding-bottom: 66px;
+		overflow: hidden;
+	}
 
 	@media print {
-		padding: 0;
+		background: white;
 	}
 
 	h2 {
 		font: 22px/30px $font-family-regular;
-		color: $color_white;
 		margin-bottom: 12px;
+		@media screen {
+			color: $color_white;
+		}
 	}
 	.address {
 		line-height: 30px;
