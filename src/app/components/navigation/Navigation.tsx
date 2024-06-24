@@ -52,11 +52,11 @@ export const Navigation = ({ className, data }: NavigationProps) => {
                         Contact
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link to="/tutoring">
                         Tutoring
                     </Link>
-                </li>
+                </li> */}
             </ul>
         </nav>;
 

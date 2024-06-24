@@ -10,16 +10,16 @@ const Contact: React.FC<ContactDetailsProps> = ({ data }) => {
     <section id="contact">
       <div className="row section-head">
         <h1>
-          <FontAwesomeIcon icon={faEnvelope} /> Talk to me:
+          <FontAwesomeIcon icon={faEnvelope} /> Get In Touch
         </h1>
       </div>
 
       <div className="row">
-        <div className="eight columns"></div>
 
         <aside className="four columns footer-widgets">
           <ContactDetails data={data} />
         </aside>
+        <div className="eight columns"></div>
       </div>
     </section>
   );

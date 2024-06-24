@@ -6,7 +6,7 @@ basics:
   name: Oliver Paraskos
   fullName: Oliver Zeno Paraskos
   label: Senior Software Engineer
-  description: Experienced software developer skilled in Kotlin, Java, TypeScript, React and AWS, with a track record of creating impactful solutions.
+  description: Experienced software developer skilled in Kotlin, Java, TypeScript, React and AWS.
   picture: ''
   email: oparaskos@gmail.com
   phone: "(+44) 07784 196 221"
@@ -16,7 +16,7 @@ basics:
 
     My journey in software development has been driven by a genuine enthusiasm for creating well-architected, visually appealing software. I'm particularly drawn to the challenge of not only building software that works seamlessly for its users but also contributes positively to people's lives and the health of our planet.
 
-    My technical toolkit includes skills such as Kotlin, Java, TypeScript, React, Node, SQL, AWS, and Terraform.
+    My technical toolkit includes skills such as Kotlin, TypeScript, React, Rust, Python, SQL, AWS, and Terraform.
 
     One of the things I enjoy most is discussing technology trends and ideas with others. Feel free to reach out if you'd like to engage in a conversation! 
   location:
@@ -32,19 +32,36 @@ basics:
   - network: GitHub
     username: oparaskos
     url: "https://github.com/oparaskos"
+  - network: Codeberg
+    username: oparaskos
+    url: "https://codeberg.org/oparaskos"
   - network: LinkedIn
     username: oliver-paraskos
     url: "https://www.linkedin.com/in/%F0%9F%90%92-oliver-paraskos-a63620176/"
-  - network: Keybase
-    username: oparaskos
-    url: "https://keybase.io/oparaskos"
+  # - network: Keybase
+  #   username: oparaskos
+  #   url: "https://keybase.io/oparaskos"
   # - network: Sketchfab
   #   className: cube
   #   username: oparaskos
   #   url: "https://sketchfab.com/oparaskos"
 work:
-- position: Full-Time Parenting
+- company: MACS EU Ltd
+  website: "http://www.macs.eu/"
+  startDate: '2023-11-01'
+  summary: >-
+    MACS is a provider of asset and facility management solutions based on IBM Maximo and TRIRIGA.
+  highlights:
+  - >- 
+    Designed and developed a Visitor Portal app, deployed on iPad Kiosks at office entrances for ad-hoc and pre-booked visitors, also supporting a touchless sign-in workflow. The application was built using Next.js and TypeScript, utilising an RDS/PostgreSQL database.
+  - >- 
+    Developed internal tooling, written in Rust and Kotlin to enhance team efficiency and productivity, streamlining workflows and improving overall performance.
+  - >- 
+    Maintenance on a React Project tightly integrated with IBM TRIRIGA with an additional NestJS API.
+- company: Career Break
+  position: Full-Time Parenting
   startDate: '2022-06-01'
+  endDate: '2023-11-01'
   summary: >-
     I made the important decision to take a full-time parenting career break
     to focus on raising and nurturing my family. Throughout this period, I dedicated
@@ -157,11 +174,6 @@ work:
   - Use of XPath for automated website scraping.
   - Database Integration with C# using Linq.
 interests:
-- name: The Environment
-  keywords:
-  - Carbon Footprinting
-  - Green Tech
-  - Clean Energy
 - name: Computer Graphics
   keywords:
   - 3D Modelling
@@ -169,7 +181,6 @@ interests:
   - Computer Aided Design
   - 3D Printing
   - Games
-- name: Machine Learning
 - name: Cyber Security
 education:
 - institution: Oxford Brookes University
@@ -228,8 +239,7 @@ skills:
   keywords:
   - jupyter
   - pandas
+- name: Rust
 languages:
 - language: English
   fluency: Native speaker
-- language: German
-  fluency: Beginner, Learning
