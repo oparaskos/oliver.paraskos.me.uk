@@ -140,8 +140,8 @@ h2 {
 
 h3 {
 	font: 600 25px/30px $font-default-bold;
-	color: $color_turquoise_green;
 	margin-bottom: 12px;
+	color: $color_turquoise_green;
 }
 
 h4,
@@ -149,23 +149,21 @@ h5,
 h6 {
 	font-family: $font-default-bold;
 	font-weight: normal;
+	line-height: 30px;
 	color: $color_turquoise_green;
 }
 
 h4 {
 	font-size: 20px;
-	line-height: 30px;
 	margin-bottom: 6px;
 }
 
 h5 {
 	font-size: 18px;
-	line-height: 30px;
 }
 
 h6 {
 	font-size: 14px;
-	line-height: 30px;
 }
 
 p {
