@@ -33,16 +33,23 @@ export const Work: React.FC<WorkProps> = ({ jobs }) => (
 
 export const Role: React.FC<RoleProps> = ({ work }) => {
   return (
-    <div>
+    <div className='role-info'>
       <h3>
-        <a rel="noreferrer noopener" href={work.website} itemProp="alumniOf">
-          {work.company}
-        </a>
+        { work.website ? 
+          <a rel="noreferrer noopener" id={work.company} href={work.website} itemProp="alumniOf">
+            {work.company}
+          </a>
+        : work.company ? <a rel="noreferrer noopener" id={work.company} itemProp="alumniOf">
+            {work.company}
+          </a>
+        : <a rel="noreferrer noopener" id={work.position}>
+            {work.position}
+          </a>}
       </h3>
       <p className="info">
-        <span className="role" itemProp="roleName">
+        { work.company && work.position ? <span className="role" itemProp="roleName">
           {work.position}
-        </span>
+        </span> : null }
         <span>&bull;</span>
         <DateRange startDate={work.startDate} endDate={work.endDate} />
       </p>

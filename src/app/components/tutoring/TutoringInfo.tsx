@@ -9,7 +9,7 @@ const TutoringInfo: React.FC = () => {
         <article>
             <section className='summary'>
                 <div className="row section-head">
-                    <div className="nine columns main-col">
+                    <div className="twelve columns main-col">
                         <h2>Tutoring</h2>
                         <p>
                             I hold a 1st Class Degree with Honours in Computer Science

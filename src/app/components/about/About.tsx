@@ -1,10 +1,9 @@
 import React from 'react';
 // import ContactDetails from './ContactDetails';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import './About.scss';
 import { ContactDetails } from '../contact/ContactDetails';
 import Image from 'next/image';
+import { DownloadButton } from './DownloadButton';
 
 interface AboutProps {
   basics?: {
@@ -33,7 +32,7 @@ const About: React.FC<AboutProps> = ({ basics, interests }) => {
             <Image className="profile-pic" src={profilepic} alt={`${name}`} />
           </div>
         )}
-        <div className="nine columns main-col">
+        <div className="twelve columns main-col">
           {bio && (
             <div>
               <h2>About Me</h2>
@@ -42,16 +41,7 @@ const About: React.FC<AboutProps> = ({ basics, interests }) => {
           )}
           <div className="row">
             <ContactDetails data={basics as any} />
-            {download && (
-              <div className="columns download">
-                <p>
-                  <a href={download} className="button">
-                    <FontAwesomeIcon icon={faDownload} className="button-icon" />
-                    Download Resume
-                  </a>
-                </p>
-              </div>
-            )}
+            {download && <DownloadButton download={download}/>}
           </div>
           {interests && (
             <div className="row">
@@ -81,3 +71,5 @@ const About: React.FC<AboutProps> = ({ basics, interests }) => {
 };
 
 export default About;
+
+

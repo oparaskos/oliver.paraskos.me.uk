@@ -32,13 +32,13 @@ const Header: React.FC<HeaderProps> = ({ data, loading = false }) => {
           {loading && <p>Loading...</p>}
           {!loading && (
             <h1 className="responsive-headline">
-              I&apos;m <span itemProp="name">{name}</span>.
+              <span className='pron'>I&apos;m</span> <span itemProp="name">{name}</span>.
             </h1>
           )}
           <h2 className="subheading">
             {description || (
               <>
-                I&apos;m a <span itemProp="homeLocation">{city}</span> based{' '}
+                <span className='pron'>I&apos;m</span> a <span itemProp="homeLocation">{city}</span> based{' '}
                 <span itemProp="jobTitle">{occupation}</span>.
               </>
             )}

@@ -58,8 +58,7 @@ work:
     Developed internal tooling, written in Rust and Kotlin to enhance team efficiency and productivity, streamlining workflows and improving overall performance.
   - >- 
     Maintenance on a React Project tightly integrated with IBM TRIRIGA with an additional NestJS API.
-- company: Career Break
-  position: Full-Time Parenting
+- position: Full-Time Parenting
   startDate: '2022-06-01'
   endDate: '2023-11-01'
   summary: >-

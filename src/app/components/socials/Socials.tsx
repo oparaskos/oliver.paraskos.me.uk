@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { codebergIconpack } from './codebergIconpack';
+import './Socials.scss';
 
 library.add(fab, fas, codebergIconpack);
 
@@ -21,7 +22,7 @@ interface SocialsProps {
 }
 
 const Socials: React.FC<SocialsProps> = ({ profiles }) => (
-  <ul>
+  <ul className='social-list'>
     {profiles.map((network) => (
       <li key={network.network}>
         <a rel="noreferrer noopener" href={network.url} title={network.network} itemProp="sameAs">

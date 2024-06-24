@@ -27,4 +27,8 @@ $color_4: #EBEEEE;
 	.header-col {
 		padding-top: 6px;
 	}
+
+	@media print {
+		display: none;
+	}
 }

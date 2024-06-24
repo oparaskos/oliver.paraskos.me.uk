@@ -8,6 +8,11 @@ $color_4: #2B2B2B;
 	padding-top: 96px;
 	padding-bottom: 66px;
 	overflow: hidden;
+
+	@media print {
+		padding: 0;
+	}
+
 	h2 {
 		font: 22px/30px $font-family-regular;
 		color: $color_white;
@@ -29,6 +34,9 @@ $color_4: #2B2B2B;
 	.download {
 		width: 58.33333%;
 		padding-top: 6px;
+		@media print {
+			display: none;
+		}
 		.button {
 			margin-top: 6px;
 			background: #444;

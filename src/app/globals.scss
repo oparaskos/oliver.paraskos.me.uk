@@ -6,6 +6,15 @@
 @import "./variables.scss";
 $color_text_label: #8B9798;
 
+@page {
+	@bottom-center {
+		content: 'Oliver Paraskos';
+	}
+	@bottom-right {
+		content: 'Page ' counter(page);
+	}
+}
+
 html {
 	margin: 0;
 	padding: 0;
@@ -29,13 +38,16 @@ body {
 	font-weight: normal;
 	font-size: 15px;
 	line-height: 30px;
-	color: $color_text_default;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 	background: $color_background;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: $color_text_default;
+	@media print {
+		color: #444;
+	}
 }
 div {
 	margin: 0;
@@ -662,6 +674,9 @@ footer {
 	vertical-align: baseline;
 	background: transparent;
 	display: block;
+	@media print {
+		display: none;
+	}
 }
 header {
 	margin: 0;
@@ -692,6 +707,7 @@ section {
 	vertical-align: baseline;
 	background: transparent;
 	display: block;
+	page-break-inside: avoid;
 }
 time {
 	margin: 0;
@@ -932,5 +948,11 @@ a {
 				}
 			}
 		}
+	}
+}
+
+@media print {
+	.main-col {
+		width: 100% !important;;
 	}
 }
